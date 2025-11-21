@@ -1,7 +1,7 @@
 "use client";
 import { useForm } from "@mantine/form";
 import { Button, Grid, Paper, Text, Textarea, TextInput } from "@mantine/core";
-import { BrandInstagram, Mail } from "tabler-icons-react";
+import { BrandGithub, BrandInstagram, BrandLinkedin, Mail } from "tabler-icons-react";
 
 export const Contact = () => {
   interface FormValues {
@@ -32,51 +32,66 @@ export const Contact = () => {
   };
 
   return (
-    <section className="lg:mt-lg sm:mt-2xl">
-      <div className="lg:text-7xl sm:text-5xl mb-xl font-bold text-[#7e64af] font-Ovo">
+    <section id="contact" className="mt-2xl">
+      <div className="lg:text-7xl text-4xl font-bold text-[#7e64af] font-Ovo">
         Contact
       </div>
-      <div className="flex flex-row items-stretch ">
-        <div className="w-1/4">
+      <div className="flex flex-col md:flex-row items-stretch mt-2xl ">
+        <div className="w-full md:w-1/4">
           <Grid gutter="lg" justify="center" align="center">
             <Grid.Col span={12} className="">
               <Paper
                 shadow="lg"
                 radius="lg"
-                p="lg"
-                className="bg-purpleDark hover:bg-black hover:border-purpleDark hover:text-[#7e64af] border-2 border-transparent flex flex-col items-center  transition-all duration-300 sm:w-[220] lg:w-[300px] h-[280px]"
+                p="sm"
+                className="bg-purpleDark hover:bg-black hover:border-purpleDark hover:text-[#7e64af] border-2 border-transparent flex flex-col items-center  transition-all duration-300 md:w-[300px] h-[170px]"
               >
-                <Mail size={32} className="mt-lg" />
-                <Text className="lg:text-xl sm:text-md mt-md">Email</Text>
+                <Mail size={32} className="mt-sm" />
+                <Text className="lg:text-xl sm:text-md ">Email</Text>
                 <Text className="lg:text-xl sm:text-md">
                   dikshya.k.jha@gmail.com
                 </Text>
-                <Text className="lg:mt-lg sm:mt-md lg:text-lg cursor-pointer">
+                {/* <Text className="mt-sm lg:text-lg cursor-pointer">
                   Send a message
-                </Text>
+                </Text> */}
               </Paper>
             </Grid.Col>
             <Grid.Col span={12}>
               <Paper
                 shadow="lg"
                 radius="lg"
-                p="lg"
-                className="bg-purpleDark hover:bg-black hover:border-purpleDark hover:text-[#7e64af] border-2 border-transparent flex flex-col items-center transition-all duration-300 sm:w-[220] lg:w-[300px] h-[280px]"
+                p="sm"
+                className="hidden md:flex bg-purpleDark hover:bg-black hover:border-purpleDark hover:text-[#7e64af] border-2 border-transparent flex flex-col items-center transition-all duration-300 md:w-[300px] h-[170px]"
               >
-                <BrandInstagram size={32} className="mt-lg" />
-                <Text className="lg:text-xl sm:text-md mt-md">Instagram</Text>
+                <BrandGithub size={32} className="mt-sm" />
+                <Text className="lg:text-xl sm:text-md ">GitHub</Text>
                 <Text className="lg:text-xl sm:text-md">dikshya_jha</Text>
-                <Text className="lg:mt-lg sm:mt-md lg:text-lg cursor-pointer">
+                {/* <Text className="mt-sm lg:text-lg cursor-pointer">
+                  View my work
+                </Text> */}
+              </Paper>
+            </Grid.Col>
+            <Grid.Col span={12}>
+              <Paper
+                shadow="lg"
+                radius="lg"
+                p="sm"
+                className="hidden md:flex bg-purpleDark hover:bg-black hover:border-purpleDark hover:text-[#7e64af] border-2 border-transparent flex flex-col items-center transition-all duration-300 md:w-[300px] h-[170px]"
+              >
+                <BrandLinkedin size={32} className="mt-sm" />
+                <Text className="lg:text-xl sm:text-md ">LinkedIn</Text>
+                <Text className="lg:text-xl sm:text-md">dikshya_jha</Text>
+                {/* <Text className="mt-sm lg:text-lg cursor-pointer">
                   Send a message
-                </Text>
+                </Text> */}
               </Paper>
             </Grid.Col>
           </Grid>
         </div>
-        <div className="w-3/4 ml-xl">
+        <div className="w-full md:w-3/4 md:ml-xl">
           <form
             onSubmit={form.onSubmit((values) => handleSubmit(values))}
-            className="lg:px-4xl sm:px-2xl"
+            className="lg:px-4xl "
           >
             <div>
               <TextInput

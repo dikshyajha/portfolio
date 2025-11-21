@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit, Ovo, Tenor_Sans, Assistant } from "next/font/google";
 import { MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
+import '@mantine/carousel/styles.css';
 import "./globals.css";
 import { TopNav } from "@/components/partials/TopNav";
 import Spotlight from "@/components/common/Spotlight";
@@ -39,9 +40,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`relative bg-black text-white pt-md`}>
+      <body className={`relative bg-black text-white`}>
         <MantineProvider>
-          <div className="px-wrapper">
+          <div className="">
             {/* <Spotlight /> */}
 
             <Stars />

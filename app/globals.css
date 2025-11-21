@@ -2,9 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   font-family: Tenor_Sans;
 
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .star {
@@ -20,7 +24,7 @@
 .mantine-TextInput-input,
 .mantine-Textarea-input {
   background-color: transparent;
-  color: white ;
+  color: white;
   border-color: transparent;
 
 }
@@ -29,6 +33,6 @@
 .mantine-Textarea-input::placeholder {
   background-color: transparent;
   font-size: 16px;
-  color: #ccc; 
-  
+  color: #ccc;
+
 }
