@@ -162,6 +162,9 @@ export const Contact = () => {
                       color: "#c4b5fd",
                       opacity: 0.7,
                     },
+                    "&:focus": {
+                      borderColor: "#7e64af",
+                    }
                   },
                 }}
               />
@@ -180,6 +183,9 @@ export const Contact = () => {
                       color: "#c4b5fd",
                       opacity: 0.7,
                     },
+                    "&:focus": {
+                      borderColor: "#7e64af",
+                    }
                   },
                 }}
               />
