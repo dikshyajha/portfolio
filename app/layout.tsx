@@ -5,29 +5,28 @@ import "@mantine/core/styles.css";
 import '@mantine/carousel/styles.css';
 import "./globals.css";
 import { TopNav } from "@/components/partials/TopNav";
-import Spotlight from "@/components/common/Spotlight";
 import Stars from "@/components/common/Stars";
 import { Footer } from "@/components/modules/Landing/Footer";
 
-const outfit = Outfit({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
+// const outfit = Outfit({
+//   subsets: ["latin"],
+//   weight: ["400", "500", "600", "700"],
+// });
 
-const ovo = Ovo({
-  subsets: ["latin"],
-  weight: ["400"],
-});
+// const ovo = Ovo({
+//   subsets: ["latin"],
+//   weight: ["400"],
+// });
 
-const tenorSans = Tenor_Sans({
-  subsets: ["latin"],
-  weight: ["400"],
-});
+// const tenorSans = Tenor_Sans({
+//   subsets: ["latin"],
+//   weight: ["400"],
+// });
 
-const assistant = Assistant({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
+// const assistant = Assistant({
+//   subsets: ["latin"],
+//   weight: ["400", "500", "600", "700"],
+// });
 export const metadata: Metadata = {
   title: "Dikshya | Portfolio",
   description: "Portfolio",

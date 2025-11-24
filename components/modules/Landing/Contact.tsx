@@ -1,16 +1,8 @@
 "use client";
-import { useForm } from "@mantine/form";
 import { Button, Grid, Paper, Text, Textarea, TextInput } from "@mantine/core";
-import { BrandGithub, BrandInstagram, BrandLinkedin, Mail } from "tabler-icons-react";
+import { BrandGithub, BrandLinkedin, Mail } from "tabler-icons-react";
 
 export const Contact = () => {
-  interface FormValues {
-    name: string;
-    email: string;
-    message: string;
-  }
-
-
 
 
   return (

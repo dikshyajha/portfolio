@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { BrandGithub, BrandInstagram, BrandLinkedin } from "tabler-icons-react";
+import { BrandGithub, BrandLinkedin } from "tabler-icons-react";
 
 export const Footer = () => {
   const navItems = [

@@ -1,5 +1,4 @@
 "use client"; // Ensure this is a client-side component
-import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { Logo } from "../common/Logo";
 import { useDisclosure } from "@mantine/hooks";
@@ -7,10 +6,10 @@ import { Burger, Drawer } from "@mantine/core";
 
 export const TopNav = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [menuList, setMenuList] = useState([]);
+  // const [menuList, setMenuList] = useState([]);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [opened, { open, close }] = useDisclosure(false);
-  const drawerRef = useRef<any>(null);
+  const drawerRef = useRef<Element>(null);
 
 
   useEffect(() => {
@@ -31,8 +30,8 @@ export const TopNav = () => {
   }, []);
 
   useEffect(() => {
-    const handleClickOutside = (event: any) => {
-      if (drawerRef.current && !drawerRef.current?.contains(event.target)) {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (drawerRef.current && !drawerRef.current?.contains(event.target as Node)) {
         setDrawerOpen(false);
       }
     };
@@ -46,10 +45,10 @@ export const TopNav = () => {
   }, []);
 
   // Toggle side drawer
-  const toggleDrawer = () => {
-    setDrawerOpen(!drawerOpen);
-    open();
-  };
+  // const toggleDrawer = () => {
+  //   setDrawerOpen(!drawerOpen);
+  //   open();
+  // };
 
   const navItems = [
     // { name: "Home", link: "#home" },

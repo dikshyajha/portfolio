@@ -1,5 +1,3 @@
-import Image from "next/image";
-import { TopNav } from "@/components/partials/TopNav";
 import { Hero } from "@/components/modules/Landing/Hero";
 import { About } from "@/components/modules/Landing/About";
 import { Contact } from "@/components/modules/Landing/Contact";

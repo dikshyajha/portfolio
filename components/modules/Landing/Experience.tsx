@@ -3,38 +3,38 @@
 import { Badge } from "@mantine/core";
 
 export const Experience = () => {
-  const experiences = [
-    {
-      id: 1,
-      role: "FullStack Developer",
-      date: "July 2025 - Present",
-      responsibilities: [
-        "Developed full-stack applications using MERN stack",
-        "Designed and implemented RESTful APIs with Node.js",
-        "Managed database architecture with MongoDB"
-      ]
-    },
-    {
-      id: 2,
-      role: "Frontend Developer",
-      date: "January 2025 - June 2025",
-      responsibilities: [
-        "Developed and maintained production-ready web applications",
-        "Implemented complex UI components and state management",
-        "Enhanced application architecture and code quality"
-      ]
-    },
-    {
-      id: 3,
-      role: "Frontend Intern",
-      date: "October 2024 - December 2024",
-      responsibilities: [
-        "Built responsive web applications using React and Next.js",
-        "Collaborated with design team for UI/UX implementation",
-        "Optimized application performance and loading times"
-      ]
-    }
-  ];
+  // const experiences = [
+  //   {
+  //     id: 1,
+  //     role: "FullStack Developer",
+  //     date: "July 2025 - Present",
+  //     responsibilities: [
+  //       "Developed full-stack applications using MERN stack",
+  //       "Designed and implemented RESTful APIs with Node.js",
+  //       "Managed database architecture with MongoDB"
+  //     ]
+  //   },
+  //   {
+  //     id: 2,
+  //     role: "Frontend Developer",
+  //     date: "January 2025 - June 2025",
+  //     responsibilities: [
+  //       "Developed and maintained production-ready web applications",
+  //       "Implemented complex UI components and state management",
+  //       "Enhanced application architecture and code quality"
+  //     ]
+  //   },
+  //   {
+  //     id: 3,
+  //     role: "Frontend Intern",
+  //     date: "October 2024 - December 2024",
+  //     responsibilities: [
+  //       "Built responsive web applications using React and Next.js",
+  //       "Collaborated with design team for UI/UX implementation",
+  //       "Optimized application performance and loading times"
+  //     ]
+  //   }
+  // ];
 
   return (
     <section id="experience" className="mt-2xl lg:mt-4xl">

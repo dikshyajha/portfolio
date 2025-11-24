@@ -10,7 +10,7 @@ export const About = () => {
           About Me
         </div>
         <div className="flex lg:justify-between lg:flex-row-reverse flex-col w-full lg:gap-x-xl mt-lg">
-          <div className="lg:w-2/4 flex mb-xl lg:mb-0">
+          <div className="hidden lg:w-2/4 lg:flex mb-xl lg:mb-0">
             <Grid gutter="10" justify="center" align="center">
               <Grid.Col span={4} className="">
                 <Paper
@@ -59,7 +59,7 @@ export const About = () => {
             <br />
             <br />
             Beyond the professional realm, my intellectual curiosity extends to
-            the realms of music, reading books, and the exploration of nature’s
+            the realms of music, reading books, and the exploration of nature&apos;s
             most serene and untamed vistas. My intrinsic drive for perpetual
             growth propels me to embrace novel challenges and cultivate an
             insatiable thirst for knowledge, all while striving for excellence

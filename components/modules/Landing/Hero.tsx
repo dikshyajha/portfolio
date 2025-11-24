@@ -1,16 +1,12 @@
 "use client";
-import { ActionIcon, Button, Divider } from "@mantine/core";
-import myimg from "@/assets/images/photo.jpg";
-import Image from "next/image";
+import { Button } from "@mantine/core";
 import Typed from "typed.js";
 
 import {
   BrandGithub,
-  BrandInstagram,
   BrandLinkedin,
-  MinusVertical,
 } from "tabler-icons-react";
-import { use, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 export const Hero = () => {
   const [windowWidth, setWindowWidth] = useState<number | null>(null);
   const typedElement = useRef<HTMLSpanElement>(null);
@@ -67,7 +63,7 @@ export const Hero = () => {
     <section id="" className="flex justify-between items-center flex-row lg:h-[70vh] scroll-mt-4xl">
       <div className="">
         <div className="text-5xl lg:text-7xl font-bold">
-          Hi, I'm {""}
+          Hi, I&apos;m {""}
           <span className="text-[#7e64af] font-Ovo ">Dikshya K. Jha </span>
         </div>
         <div className="lg:text-5xl text-3xl font-semibold font-Ovo">
@@ -94,7 +90,7 @@ export const Hero = () => {
             component="a"
             href={"#contact"}
           >
-            Let's Connect
+            Let&apos;s Connect
           </Button>
         </div>
       </div>
