@@ -1,11 +1,13 @@
 export const Logo = () => {
   return (
-    <div className="font-bold text-4xl cursor-pointer">
+    <div className="cursor-pointer w-[100px] h-[60px] mt-sm" >
       <a
         href="#">
-        Dikshya
+        <img src="/images/final-logo.png" alt="" className="object-contain "
+        />
 
       </a>
     </div>
   );
 };
+

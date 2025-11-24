@@ -23,13 +23,28 @@ export const Footer = () => {
     setActiveLink(link);
   };
 
+  const handleLinkedInClick = () => {
+    window.open(
+      "https://www.linkedin.com/in/dikshya-k-jha?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B9XtBh7NKQ66PwH1DjPqt5A%3D%3D",
+      "_blank",
+      "noopener,noreferrer"
+    );
+  };
+
+  const handleGithubClick = () => {
+    window.open(
+      "https://github.com/dikshyajha",
+      "_blank",
+      "noopener,noreferrer"
+    );
+  };
   return (
     <>
       <section className="mt-wrapper bg-purpleDark hover:bg-[#7e64af] text-center text-black">
         <div className="text-3xl md:text-5xl pt-3xl font-bol font-Ovo font font-col">
           Dikshya Kumari Jha
         </div>
-        <div className="nav flex justify-center gap-x-lg text-md md:text-xl mt-lg">
+        <div className="nav flex justify-center gap-x-lg text-sm md:text-xl mt-lg">
           {navItems.map((item) => (
             <div key={item.name}>
               <Link
@@ -45,13 +60,13 @@ export const Footer = () => {
             </div>
           ))}
         </div>
-        <div className="flex flex-row justify-center items-center my-2xl gap-x-xl">
-          <BrandLinkedin size={44} className="cursor-pointer" />
-          <BrandGithub size={44} className="cursor-pointer" />
+        <div className="flex flex-row justify-center items-center my-xl gap-x-xl">
+          <BrandLinkedin size={44} className="cursor-pointer" onClick={handleLinkedInClick} />
+          <BrandGithub size={44} className="cursor-pointer" onClick={handleGithubClick} />
           {/* <BrandInstagram size={44} className="cursor-pointer" /> */}
         </div>
         <div className="pb-2xl text-lg">
-          Dikshya Kumari Jha. All rights reserved
+          © {new Date().getFullYear()} Dikshya Kumari Jha. All rights reserved.
         </div>
       </section>
     </>

@@ -73,12 +73,12 @@ export const TopNav = () => {
 
   return (
     <>
-      <nav className={`w-full shadow-lg flex items-center justify-between fixed top-0 z-50 transition-all duration-300 px-wrapper py-xs ${scrolled
+      <nav className={`w-full shadow-lg flex items-center justify-between fixed top-0 z-50 transition-all duration-300 px-wrapper ${scrolled
         ? "bg-white/10 rounded-md backdrop-blur-3xl "
         : "bg-black text-white/50 "
         }`}>
         <Logo />
-        <div className="hidden lg:flex justify-between gap-x-xl text-xl">
+        <div className="hidden lg:flex justify-between items-center gap-x-xl text-xl">
           {navItems.map((item) => (
             <div key={item.name}>
               <a

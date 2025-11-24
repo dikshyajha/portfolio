@@ -1,7 +1,7 @@
 "use client";
 import { Carousel } from "@mantine/carousel";
 import { ActionIcon, Button } from "@mantine/core";
-import { BrandGithub, ExternalLink } from "tabler-icons-react";
+import { BrandGithub, BrandGitlab, ExternalLink } from "tabler-icons-react";
 
 export const Projects = () => {
     const projects = [
@@ -13,15 +13,20 @@ export const Projects = () => {
             ],
             github: "",
             liveUrl: "https://biruwapasa.com",
+            showGitButton: false,
+
+
         },
         {
-            title: "PathToConnectTalent",
+            title: "ConnectTalent",
             description: "Platform connecting talents with opportunities and hosting tech-related educational trainings",
             images: [
                 "/images/PathToConnectTalent/landing.png",
             ],
             github: "",
-            liveUrl: "",
+            liveUrl: "https://pathtoconnecttalent.nxin.tech/",
+            showGitButton: false,
+
         },
         {
             title: "CliniCross",
@@ -30,7 +35,30 @@ export const Projects = () => {
                 "/images/CliniCross/landing.png",
             ],
             github: "",
-            liveUrl: "",
+            liveUrl: "https://app.clinicross.com",
+            showGitButton: false,
+
+        },
+        {
+            title: "ParkEase",
+            description: "Smart parking management system with IoT integration for real-time parking availability",
+            images: [
+                "/images/ParkEase-Website/mobile-image.jpg",
+                "/images/ParkEase-Website/Landing.png",
+                "/images/ParkEase-Website/login.png",
+                "/images/ParkEase-Website/user dashboard.png",
+                "/images/ParkEase-Website/add-vehicle.png",
+                "/images/ParkEase-Website/find-parking.png",
+                "/images/ParkEase-Website/user-activeparking.png",
+                "/images/ParkEase-Website/booking-payment.png",
+                "/images/ParkEase-Website/user-history.png",
+                "/images/ParkEase-Website/gatekeeper-db.png",
+            ],
+            github: "https://gitlab.com/park-ease/parkeight",
+            liveUrl: "https://parkeight.vercel.app/",
+            showGitButton: true,
+            isGitlab: true,
+
         },
         {
             title: "TravelTales",
@@ -40,7 +68,7 @@ export const Projects = () => {
                 "/images/Travel Tales/signin.png",
                 "/images/Travel Tales/homepage.png",
                 "/images/Travel Tales/add post.png",
-                "/images/Travel Tales/chat-nomessage.png",
+                // "/images/Travel Tales/chat-nomessage.png",
                 "/images/Travel Tales/chat-message.png",
                 "/images/Travel Tales/janaki.png",
                 "/images/Travel Tales/user profile.png",
@@ -50,17 +78,10 @@ export const Projects = () => {
             ],
             github: "https://github.com/dikshyajha/MERN-travel-tales",
             liveUrl: "https://traveltales-ruby.vercel.app/",
+            showGitButton: true,
+            isGitlab: false,
         },
-        {
-            title: "ParkEase",
-            description: "Smart parking management system with IoT integration for real-time parking availability",
-            images: [
-                "/images/ParkEase-Website/landing.png",
-                "/images/ParkEase-Website/login.png",
-            ],
-            github: "",
-            liveUrl: "",
-        },
+
         // {
         //     title: "ParkEase App",
         //     description: "Mobile application built with Flutter for seamless parking spot booking and management",
@@ -87,19 +108,22 @@ export const Projects = () => {
                 "/images/RDS-EMS/priest.png",
                 "/images/RDS-EMS/service.png",
                 "/images/RDS-EMS/booking.png",
-                "/images/RDS-EMS/contact.png",
-                "/images/RDS-EMS/booking.png",
                 "/images/RDS-EMS/profile.png",
+                "/images/RDS-EMS/contact.png",
+                // "/images/RDS-EMS/booking.png",
                 "/images/RDS-EMS/admin-login.png",
                 "/images/RDS-EMS/admin-home.png",
             ],
             github: "https://github.com/dikshyajha/Traditional-Event-Management-System",
             liveUrl: "http://rds-events.infinityfreeapp.com/",
+            showGitButton: true,
+            isGitLab: false,
+
         },
     ];
 
     return (
-        <section id="projects" className="mt-2xl lg:mt-4xl">
+        <section id="projects" className="mt-2xl lg:mt-4xl scroll-mt-4xl">
             <div className="lg:text-7xl text-4xl font-bold text-[#7e64af] font-Ovo">
                 Projects
             </div>
@@ -108,7 +132,7 @@ export const Projects = () => {
                 {projects.map((project, index) => (
                     <div
                         key={index}
-                        className="bg-gradient-to-br from-[#2d1b4e] to-[#1e1538] rounded-2xl overflow-hidden shadow-lg hover:shadow-[#a78bfa]/20 transition-all duration-300 px-sm py-lg"
+                        className="bg-gradient-to-br from-[#2d1b4e] to-[#1e1538] hover:bg-black hover:from-transparent hover:to-transparent rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 px-sm py-lg hover:bg-black hover:border-purpleDark border-2 border-transparent hover:scale-105"
                     >
                         {project.images.length > 1 ? (
                             <Carousel
@@ -148,39 +172,26 @@ export const Projects = () => {
                             <div className="text-gray-300 leading-relaxed">
                                 {project.description}
                             </div>
-
                             <div className="flex gap-xs mt-sm">
-                                {/* {project.github ? ( */}
-                                <Button
-                                    variant="outline"
-                                    color="#7e64af"
-                                    className="w-1/2 hover:text-white hover:border-[#7e64af] hover:bg-[#7e64af] transition-all duration-300"
-                                    leftSection={<BrandGithub />}
-                                    component="a"
-                                    href={project.github}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    GitHub
-                                </Button>
-                                {/* </Button>
-                                ) : (
+                                {project.showGitButton && (
                                     <Button
                                         variant="outline"
-                                        color="grey"
-                                        className="w-1/2"
-                                        leftSection={<BrandGithub />}
-                                        disabled
+                                        color="#7e64af"
+                                        className="w-1/2 hover:text-white hover:border-[#7e64af] hover:bg-[#7e64af] transition-all duration-300"
+                                        leftSection={project.isGitlab ? <BrandGitlab /> : <BrandGithub />}
+                                        component="a"
+                                        href={project.github}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                     >
-                                        GitHub
+                                        {project.isGitlab ? "GitLab" : "GitHub"}
                                     </Button>
-                                )} */}
+                                )}
 
-                                {/* {project.liveUrl ? ( */}
                                 <Button
                                     variant="outline"
                                     color="#7e64af"
-                                    className="w-1/2 hover:text-white hover:border-[#7e64af] hover:bg-[#7e64af] transition-all duration-300"
+                                    className={`${project.showGitButton ? 'w-1/2' : 'w-full'} hover:text-white hover:border-[#7e64af] hover:bg-[#7e64af] transition-all duration-300`}
                                     leftSection={<ExternalLink />}
                                     component="a"
                                     href={project.liveUrl}
@@ -189,18 +200,8 @@ export const Projects = () => {
                                 >
                                     Visit Site
                                 </Button>
-                                {/* ) : (
-                                    <Button
-                                        variant="outline"
-                                        color="gray"
-                                        className="w-1/2"
-                                        leftSection={<ExternalLink />}
-                                        disabled
-                                    >
-                                        Visit Site
-                                    </Button>
-                                )} */}
                             </div>
+
                         </div>
                     </div>
                 ))}

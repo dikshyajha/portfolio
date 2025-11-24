@@ -31,6 +31,9 @@ const assistant = Assistant({
 export const metadata: Metadata = {
   title: "Dikshya | Portfolio",
   description: "Portfolio",
+  icons: {
+    icon: "images/final-logo.png",
+  }
 };
 
 export default function RootLayout({

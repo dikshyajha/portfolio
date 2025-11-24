@@ -1,24 +1,13 @@
 "use client";
+
+import { Badge } from "@mantine/core";
+
 export const Experience = () => {
   const experiences = [
     {
       id: 1,
-      companyLogo: "/images/logo-nxit.svg",
-      role: "Frontend Intern",
-      company: "Next In Tech",
-      date: "September 2024 - December 2025",
-      responsibilities: [
-        "Built responsive web applications using React and Next.js",
-        "Collaborated with design team for UI/UX implementation",
-        "Optimized application performance and loading times"
-      ]
-    },
-    {
-      id: 2,
-      companyLogo: "/images/logo-nxit.svg",
       role: "FullStack Developer",
-      company: "Next In Tech",
-      date: "February 2025 - Present ",
+      date: "July 2025 - Present",
       responsibilities: [
         "Developed full-stack applications using MERN stack",
         "Designed and implemented RESTful APIs with Node.js",
@@ -26,27 +15,23 @@ export const Experience = () => {
       ]
     },
     {
-      id: 3,
-      companyLogo: "/images/udeshya-logo.svg",
-      role: "Tech Content Creator & Program Coordinator (Volunteer)",
-      company: "Udeshya - Girls In STEM",
-      date: "October 2025 - Present", // or specific dates
+      id: 2,
+      role: "Frontend Developer",
+      date: "January 2025 - June 2025",
       responsibilities: [
-        "Created engaging tech content to promote STEM education for girls",
-        "Organized and ran programs to increase girls' involvement in technology",
-        "Collaborated with team to raise awareness about women in STEM fields"
+        "Developed and maintained production-ready web applications",
+        "Implemented complex UI components and state management",
+        "Enhanced application architecture and code quality"
       ]
     },
     {
-      id: 4,
-      companyLogo: "/images/healthcore-logo.svg",
-      role: "Event Volunteer",
-      company: "Health Core Foundation",
-      date: "March 2025 - Present",
+      id: 3,
+      role: "Frontend Intern",
+      date: "October 2024 - December 2024",
       responsibilities: [
-        "Participated in social welfare events and community outreach programs",
-        "Assisted in organizing awareness campaigns",
-        "Collaborated with team members to support community initiatives"
+        "Built responsive web applications using React and Next.js",
+        "Collaborated with design team for UI/UX implementation",
+        "Optimized application performance and loading times"
       ]
     }
   ];
@@ -57,132 +42,72 @@ export const Experience = () => {
         Experience
       </div>
 
-      <div className="relative mt-2xl max-w-6xl mx-auto">
-        {/* Timeline vertical line for desktop */}
-        <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-0.5 bg-white"></div>
+      <div className="mt-2xl bg-black from-transparent to-transparent rounded-2xl p-lg shadow-lg border-purpleDark border-2 ">
+        {/* Company Header */}
+        <div className="flex items-center justify-between gap-sm ">
+          <div className="py-xs px-sm flex items-center justify-center ">
+            <img
+              src="/images/logo-nxit.svg"
+              alt="Next In Tech"
+              className="w-full h-full object-contain"
+            />
+          </div>
+          <Badge color="#9b7fd4" variant="outline" className="mr-xs">
+            October 2024 - Present
+          </Badge>
+          {/* <div className="text-xl font-bold text-[#7364af] font-Ovo">
+            Next In Tech
+          </div> */}
 
-        {experiences.map((exp, index) => (
-          <div
-            key={exp.id}
-            className="relative mb-2xl last:mb-0"
-          >
-            {/* Desktop Layout */}
-            <div className="hidden lg:flex items-center">
-              {index % 2 === 0 ? (
-                <>
-                  {/* Left side - Content */}
-                  <div className="w-1/2 ">
-                    <div className="bg-gradient-to-br from-[#2d1b4e] to-[#1e1538] shadow-xl p-md rounded-2xl hover:shadow-[#a78bfa]/20 transition-all duration-300">
-                      <div className="text-2xl font-bold text-[#c4b5fd] font-Ovo ">
-                        {exp.role}
-                      </div>
-                      <p className="text-[#9b7fd4] font-semibold ">{exp.company}</p>
+        </div>
 
-                      <ul className="">
-                        {exp.responsibilities.map((item, idx) => (
-                          <li key={idx} className="text-gray-300 text-sm flex items-start">
-                            <span className="text-[#7e64af]">•</span>
-                            <span className="">{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+        {/* Timeline */}
+        {/* <div className="relative">
+          {/* Vertical line */}
+
+        {/* Experience Items */}
+        {/* <div className="space-y-sm">
+            {experiences.map((exp, index) => (
+              <div key={exp.id} className="relative pl-sm">
+                {/* Dot */}
+        {/* <div className="absolute left-0 top-0 mt-2">
+                  <div className="w-10 h-10 bg-gradient-to-br from-[#7e64af] to-[#9b7fd4] rounded-full border-4 border-[#0a0118] shadow-lg flex items-center justify-center">
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
                   </div>
+                </div> */}
 
-                  {/* Center - Logo and date */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center z-10">
-                    <span className="text-gray-400 text-sm font-semibold mb-xs whitespace-nowrap">
+        {/* Content */}
+        {/* <div className="bg-gradient-to-br from-[#1e1538]/50 to-[#2d1b4e]/30 rounded-2xl p-sm transition-transform duration-300 shadow-lg border border-[#7e64af]/10 hover:border-purpleDark hover:bg-black hover:from-transparent hover:to-transparent">
+                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
+                    <div className="text-2xl font-bold text-[#c4b5fd] font-Ovo">
+                      {exp.role}
+                    </div>
+                    <Badge color="#9b7fd4" variant="outline" className="mr-xs">
                       {exp.date}
-                    </span>
-                    <div className="w-12 h-12 px-md py-xs bg-gradient-to-br from-[#2d1b4e] to-[#1e1538] rounded-full border-2 border-white flex items-center justify-center shadow-xl">
-                      <img
-                        src={exp.companyLogo}
-                        alt={exp.company}
-                        className="w-8 h-8 object-contain"
-                      />
-                    </div>
+                    </Badge>
                   </div>
 
-                  {/* Right side - Empty */}
-                  <div className="w-1/2"></div>
-                </>
-              ) : (
-                <>
-                  {/* Left side - Empty */}
-                  <div className="w-1/2"></div>
-
-                  {/* Center - Logo and date */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center z-10">
-                    <span className="text-gray-400 text-sm font-semibold mb-xs whitespace-nowrap">
-                      {exp.date}
-                    </span>
-                    <div className="w-12 h-12 px-md py-xs bg-gradient-to-br from-[#2d1b4e] to-[#1e1538] rounded-full border-2 border-white flex items-center justify-center shadow-xl">
-                      <img
-                        src={exp.companyLogo}
-                        alt={exp.company}
-                        className="w-8 h-8 object-contain"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Right side - Content */}
-                  <div className="w-1/2 ">
-                    <div className="bg-gradient-to-br from-[#2d1b4e] to-[#1e1538] shadow-xl p-md rounded-2xl hover:shadow-[#a78bfa]/20 transition-all duration-300 pl-6xl">
-                      <div className="text-2xl font-bold text-[#c4b5fd] font-Ovo ">
-                        {exp.role}
-                      </div>
-                      <p className="text-[#9b7fd4] font-semibold ">{exp.company}</p>
-
-                      <ul className="">
-                        {exp.responsibilities.map((item, idx) => (
-                          <li key={idx} className="text-gray-300 text-sm flex items-start">
-                            <span className="text-[#7e64af]">•</span>
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </>
-              )}
-            </div>
-
-            {/* Mobile Layout */}
-            <div className="lg:hidden relative  mb-3xl last:mb-0">
-              <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-white"></div>
-
-              <div className="absolute left-0 transform -translate-x-1/2 top-0">
-                <div className="w-16 h-16 bg-gradient-to-br from-[#2d1b4e] to-[#1e1538] rounded-full border-2 border-white flex items-center justify-center shadow-xl px-sm py-xs">
-                  <img
-                    src={exp.companyLogo}
-                    alt={exp.company}
-                    className="w-8 h-8 object-contain"
-                  />
+                  <ul className="s">
+                    {exp.responsibilities.map((item, idx) => (
+                      <li key={idx} className="text-gray-300 text-sm lg:text-base flex items-start">
+                        <span className="text-[#7e64af] mr-xs text-lg">▹</span>
+                        <span className="leading-relaxed">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
+            ))} */}
+        {/* </div> */}
+        {/* </div> */}
 
-              <div className="bg-gradient-to-br from-[#2d1b4e] to-[#1e1538] shadow-xl px-4xl py-sm rounded-2xl">
-                <span className="text-gray-400 text-sm font-semibold block">
-                  {exp.date}
-                </span>
-                <h3 className="text-xl font-bold text-[#c4b5fd] font-Ovo">
-                  {exp.role}
-                </h3>
-                <p className="text-[#9b7fd4] font-semibold ">{exp.company}</p>
+        <div className=" rounded-2xl p-sm transition-transform duration-300 shadow-lg border border-[#7e64af]/10 hover:border-purpleDark hover:bg-black hover:from-transparent hover:to-transparent">
+          <div className="text-lg">
+            Next in Tech is an innovative software company creating solutions across various domains. I joined as an intern in October 2024 and gradually grew into a Frontend Developer in January 2025 and then into a Full-Stack Developer role after six months. I currently work with a wide range of technologies, including React.js, Next.js, Nest.js, and TypeORM, building user-facing features, developing server-side logic, and integrating databases. I am fortunate to be part of a highly supportive and skilled team that fosters curiosity, experimentation, and continuous learning. The environment exposed me to a wide range of challenges and projects, allowing me to explore new technologies, research effective approaches, and take responsibility for delivering features and solutions that add real value. This experience has strengthened my technical expertise, problem-solving skills, and collaboration, while continually inspiring me to push boundaries and grow.
 
-                <ul className="">
-                  {exp.responsibilities.map((item, idx) => (
-                    <li key={idx} className="text-gray-300 text-sm flex items-start">
-                      <span className="text-[#7e64af] ">•</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
           </div>
-        ))}
+        </div>
       </div>
-    </section>
+    </section >
   );
 };

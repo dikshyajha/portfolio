@@ -2,33 +2,78 @@
 import { ActionIcon, Button, Divider } from "@mantine/core";
 import myimg from "@/assets/images/photo.jpg";
 import Image from "next/image";
+import Typed from "typed.js";
+
 import {
   BrandGithub,
   BrandInstagram,
   BrandLinkedin,
   MinusVertical,
 } from "tabler-icons-react";
-import { use, useEffect, useState } from "react";
+import { use, useEffect, useRef, useState } from "react";
 export const Hero = () => {
-  const [windowWidth, setWindowWidth] = useState<number>(typeof window !== "undefined" ? window.innerWidth : 0);
+  const [windowWidth, setWindowWidth] = useState<number | null>(null);
+  const typedElement = useRef<HTMLSpanElement>(null);
+  const handleLinkedInClick = () => {
+    window.open(
+      "https://www.linkedin.com/in/dikshya-k-jha?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B9XtBh7NKQ66PwH1DjPqt5A%3D%3D",
+      "_blank",
+      "noopener,noreferrer"
+    );
+  };
+
+  const handleGithubClick = () => {
+    window.open(
+      "https://github.com/dikshyajha",
+      "_blank",
+      "noopener,noreferrer"
+    );
+  };
+
   useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    const updateWidth = () => setWindowWidth(window.innerWidth);
+
+    updateWidth(); // set actual width immediately on mount
+    window.addEventListener("resize", updateWidth);
+
+    return () => window.removeEventListener("resize", updateWidth);
   }, []);
-  const buttonSize = windowWidth < 1024 ? "sm" : "xl";
-  const logoSize = windowWidth < 1024 ? "24" : "40";
+
+  useEffect(() => {
+    if (typedElement.current) {
+      const typed = new Typed(typedElement.current, {
+        strings: ["Computer Engineer", "FullStack Developer"],
+        typeSpeed: 80,
+        backSpeed: 50,
+        backDelay: 1000,
+        loop: true,
+      });
+
+      return () => {
+        typed.destroy();
+      };
+    }
+  }, []);
+
+  const buttonSize =
+    windowWidth !== null && windowWidth < 1024 ? "sm" : "xl";
+
+  const logoSize =
+    windowWidth !== null && windowWidth < 1024 ? "24" : "40";
+
 
 
   return (
-    <section id="" className="flex justify-between items-center flex-row lg:h-[70vh]">
+    <section id="" className="flex justify-between items-center flex-row lg:h-[70vh] scroll-mt-4xl">
       <div className="">
         <div className="text-5xl lg:text-7xl font-bold">
           Hi, I'm {""}
           <span className="text-[#7e64af] font-Ovo ">Dikshya K. Jha </span>
         </div>
         <div className="lg:text-5xl text-3xl font-semibold font-Ovo">
-          FullStack Developer
+          <span ref={typedElement}></span>
+
+
         </div>
         <div className="flex flex-row gap-sm mt-md lg:mt-2xl ">
           <Button
@@ -36,6 +81,8 @@ export const Hero = () => {
             color="#7e64af"
             size={buttonSize}
             className=" hover:text-white hover:border-[#7e64af] hover:bg-[#7e64af] transition-all duration-300"
+            component="a"
+            href={"#contact"}
           >
             CV Available on Request
           </Button>
@@ -44,6 +91,8 @@ export const Hero = () => {
             color="#7e64af"
             size={buttonSize}
             className=" hover:text-[#7e64af] hover:bg-black hover:border-[#7e64af] border-1 border-transparent transition-all duration-300"
+            component="a"
+            href={"#contact"}
           >
             Let's Connect
           </Button>
@@ -62,10 +111,10 @@ export const Hero = () => {
 
         <div className="flex flex-col justify-center items-center gap-lg">
           <div className="cursor-pointer">
-            <BrandLinkedin size={logoSize} color="#7e64af" />
+            <BrandLinkedin size={logoSize} color="#7e64af" onClick={handleLinkedInClick} />
           </div>
           <div className="cursor-pointer">
-            <BrandGithub size={logoSize} color="#7e64af" />
+            <BrandGithub size={logoSize} color="#7e64af" onClick={handleGithubClick} />
           </div>
           {/* <div className="cursor-pointer">
             <BrandInstagram size={logoSize} color="#7e64af" />
@@ -76,6 +125,5 @@ export const Hero = () => {
     </section>
   );
 };
-// https://github.com/dikshyajha
 
-// https://www.linkedin.com/in/dikshya-k-jha?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B9XtBh7NKQ66PwH1DjPqt5A%3D%3D
+
