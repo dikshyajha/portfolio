@@ -14,7 +14,7 @@ export const Skills = () => {
         { name: "SQL", image: "/images/SQL.png" },
         { name: "TypeORM", image: "/images/typeorm.png" },
         // { name: "PHP", image: "/images/PHP.png" },
-        { name: "Python", image: "/images/Python.png" },
+        // { name: "Python", image: "/images/Python.png" },
         // { name: "C", image: "/images/C.png" },
         // { name: "C++", image: "/images/C++.png" },
         // { name: "Tailwind CSS", image: "/images/Tailwind_CSS.png" },
