@@ -35,13 +35,8 @@ export const About = () => {
                   shadow="lg"
                   radius="lg"
                   p="lg"
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                  className="bg-[#4d415e] hover:bg-black hover:border-purpleDark hover:text-[#7e64af] border-2 border-transparent transition-all duration-300 sm:w-[220px] sm:h-[200px] lg:w-[180px] lg:h-[280px]"
+
+                  className="flex flex-col justify-center items-center bg-[#4d415e] hover:bg-black hover:border-purpleDark hover:text-[#7e64af] border-2 border-transparent transition-all duration-300 sm:w-[220px] sm:h-[200px] lg:w-[180px] lg:h-[280px]"
                 >
                   <School size={32} />
                   <Text className="text-xl">Education</Text>
