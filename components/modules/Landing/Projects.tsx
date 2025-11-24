@@ -1,6 +1,5 @@
-"use client";
 import { Carousel } from "@mantine/carousel";
-import { ActionIcon, Button } from "@mantine/core";
+import { Button } from "@mantine/core";
 import { BrandGithub, BrandGitlab, ExternalLink } from "tabler-icons-react";
 
 export const Projects = () => {
