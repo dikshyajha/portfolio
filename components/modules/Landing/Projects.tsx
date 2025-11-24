@@ -21,7 +21,7 @@ export const Projects = () => {
             title: "ConnectTalent",
             description: "Platform connecting talents with opportunities and hosting tech-related educational trainings",
             images: [
-                "/images/PathToConnectTalent/landing.png",
+                "/images/PathToConnectTalent/Landing.png",
             ],
             github: "",
             liveUrl: "https://pathtoconnecttalent.nxin.tech/",
@@ -138,9 +138,15 @@ export const Projects = () => {
                             <Carousel
                                 withIndicators
                                 loop
+                                styles={{
+                                    control: {
+                                        backgroundColor: '#7e64af', // arrow background color
+                                        color: 'white', // arrow icon color
+                                    },
+                                }}
                                 classNames={{
                                     root: "rounded-t-2xl",
-                                    indicator: "w-2 h-2 bg-gray-500 data-[active]:bg-[#7e64af]",
+                                    indicator: "w-2 h-2 bg-[#111827] data-[active]:bg-[#7e64af]",
                                 }}
                             >
                                 {project.images.map((image, imgIndex) => (
@@ -177,8 +183,10 @@ export const Projects = () => {
                                     <Button
                                         variant="outline"
                                         color="#7e64af"
-                                        className="w-1/2 hover:text-white hover:border-[#7e64af] hover:bg-[#7e64af] transition-all duration-300"
-                                        leftSection={project.isGitlab ? <BrandGitlab /> : <BrandGithub />}
+                                        fullWidth
+                                        classNames={{
+                                            root: " hover:text-white hover:border-[#7e64af] hover:bg-[#7e64af] transition-all duration-300"
+                                        }} leftSection={project.isGitlab ? <BrandGitlab /> : <BrandGithub />}
                                         component="a"
                                         href={project.github}
                                         target="_blank"
@@ -191,8 +199,10 @@ export const Projects = () => {
                                 <Button
                                     variant="outline"
                                     color="#7e64af"
-                                    className={`${project.showGitButton ? 'w-1/2' : 'w-full'} hover:text-white hover:border-[#7e64af] hover:bg-[#7e64af] transition-all duration-300`}
-                                    leftSection={<ExternalLink />}
+                                    fullWidth
+                                    classNames={{
+                                        root: " hover:text-white hover:border-[#7e64af] hover:bg-[#7e64af] transition-all duration-300"
+                                    }} leftSection={<ExternalLink />}
                                     component="a"
                                     href={project.liveUrl}
                                     target="_blank"
