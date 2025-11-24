@@ -1,7 +1,6 @@
 "use client";
 import { Button } from "@mantine/core";
 import Typed from "typed.js";
-
 import {
   BrandGithub,
   BrandLinkedin,
@@ -60,13 +59,13 @@ export const Hero = () => {
 
 
   return (
-    <section id="" className="flex justify-between items-center flex-row lg:h-[70vh] scroll-mt-4xl">
+    <section id="" className="flex justify-between items-center flex-row h-[70vh] scroll-mt-4xl">
       <div className="">
-        <div className="text-5xl lg:text-7xl font-bold">
+        <div className="text-4xl md:text-5xl lg:text-7xl font-bold">
           Hi, I&apos;m {""}
           <span className="text-[#7e64af] font-Ovo ">Dikshya K. Jha </span>
         </div>
-        <div className="lg:text-5xl text-3xl font-semibold font-Ovo">
+        <div className="lg:text-5xl md:text-3xl text-2xl font-semibold font-Ovo">
           <span ref={typedElement}></span>
 
 
