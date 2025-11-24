@@ -52,7 +52,7 @@ export const About = () => {
           </div>
           <div className="lg:w-2/4 text-lg">
             Greetings! I am Dikshya K. Jha, hailing from the culturally rich and
-            geographically diverse nation of Nepal. I hold a Bachelor's degree
+            geographically diverse nation of Nepal. I hold a Bachelor&apos;s degree
             in Computer Engineering from Purbanchal University and am currently
             honing my expertise as a Software Developer at NXIT, where I immerse
             myself in the dynamic world of technology.
@@ -63,7 +63,7 @@ export const About = () => {
             most serene and untamed vistas. My intrinsic drive for perpetual
             growth propels me to embrace novel challenges and cultivate an
             insatiable thirst for knowledge, all while striving for excellence
-            and mastery in every facet of my life’s endeavors.
+            and mastery in every facet of my life&apos;s endeavors.
           </div>
 
 

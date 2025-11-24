@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Outfit, Ovo, Tenor_Sans, Assistant } from "next/font/google";
+// import { Outfit, Ovo, Tenor_Sans, Assistant } from "next/font/google";
 import { MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
 import '@mantine/carousel/styles.css';

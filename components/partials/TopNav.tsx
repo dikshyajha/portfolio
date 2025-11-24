@@ -7,7 +7,7 @@ import { Burger, Drawer } from "@mantine/core";
 export const TopNav = () => {
   const [scrolled, setScrolled] = useState(false);
   // const [menuList, setMenuList] = useState([]);
-  const [drawerOpen, setDrawerOpen] = useState(false);
+  // const [drawerOpen, setDrawerOpen] = useState(false);
   const [opened, { open, close }] = useDisclosure(false);
   const drawerRef = useRef<Element>(null);
 
@@ -32,7 +32,7 @@ export const TopNav = () => {
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (drawerRef.current && !drawerRef.current?.contains(event.target as Node)) {
-        setDrawerOpen(false);
+        close()
       }
     };
 
