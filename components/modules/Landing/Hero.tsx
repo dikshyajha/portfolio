@@ -75,7 +75,9 @@ export const Hero = () => {
             variant="outline"
             color="#7e64af"
             size={buttonSize}
-            className=" hover:text-white hover:border-[#7e64af] hover:bg-[#7e64af] transition-all duration-300"
+            classNames={{
+              root: " hover:text-white hover:border-[#7e64af] hover:bg-[#7e64af] transition-all duration-300"
+            }}
             component="a"
             href={"#contact"}
           >
@@ -85,8 +87,12 @@ export const Hero = () => {
             variant="filled"
             color="#7e64af"
             size={buttonSize}
-            className=" hover:text-[#7e64af] hover:bg-black hover:border-[#7e64af] border-1 border-transparent transition-all duration-300"
+            classNames={{
+              root:
+                " hover:text-[#7e64af] hover:bg-black hover:border-[#7e64af] border-1 border-transparent transition-all duration-300"
+            }}
             component="a"
+
             href={"#contact"}
           >
             Let&apos;s Connect
