@@ -182,7 +182,7 @@ export const Contact = () => {
                 root:
                   " hover:text-[#7e64af] hover:bg-black hover:border-[#7e64af] border-1 border-transparent transition-all duration-300"
               }}            >
-              Send Message
+              Send Messagesss
             </Button>
           </form>
         </div>{" "}
