@@ -23,7 +23,10 @@ export const Contact = () => {
                   justifyContent: "center",
                   alignItems: "center",
                 }}
-                className="bg-[#4d415e] hover:bg-black hover:border-purpleDark hover:text-[#7e64af] border-2 border-transparent  transition-all duration-300 md:w-[300px] h-[170px]"
+                styles={{
+                  root: { backgroundColor: '#4d415e' }
+                }}
+                className=" hover:bg-black hover:border-purpleDark hover:text-[#7e64af] border-2 border-transparent  transition-all duration-300 md:w-[300px] h-[170px]"
               >
                 <Mail size={32} className="mt-sm" />
                 <Text className="lg:text-xl sm:text-md ">Email</Text>
@@ -46,7 +49,10 @@ export const Contact = () => {
                   justifyContent: "center",
                   alignItems: "center",
                 }}
-                className="hidden md:flex bg-[#4d415e] hover:bg-black hover:border-purpleDark hover:text-[#7e64af] border-2 border-transparent transition-all duration-300 md:w-[300px] h-[170px]"
+                styles={{
+                  root: { backgroundColor: '#4d415e' }
+                }}
+                className="hidden md:flex hover:bg-black hover:border-purpleDark hover:text-[#7e64af] border-2 border-transparent transition-all duration-300 md:w-[300px] h-[170px]"
               >
                 <BrandGithub size={32} className="mt-sm" />
                 <Text className="lg:text-xl sm:text-md ">GitHub</Text>
@@ -67,7 +73,10 @@ export const Contact = () => {
                   justifyContent: "center",
                   alignItems: "center",
                 }}
-                className="hidden md:flex bg-[#4d415e] hover:bg-black hover:border-purpleDark hover:text-[#7e64af] border-2 border-transparent transition-all duration-300 md:w-[300px] h-[170px]"
+                styles={{
+                  root: { backgroundColor: '#4d415e' }
+                }}
+                className="hidden md:flex hover:bg-black hover:border-purpleDark hover:text-[#7e64af] border-2 border-transparent transition-all duration-300 md:w-[300px] h-[170px]"
               >
                 <BrandLinkedin size={32} className="mt-sm" />
                 <Text className="lg:text-xl sm:text-md ">LinkedIn</Text>
@@ -127,10 +136,14 @@ export const Contact = () => {
                   input: {
                     backgroundColor: "transparent",
                     color: "white",
-                    "::placeholder": {
-                      color: "#c4b5fd", // placeholder color
+                    border: "transparent",
+                    "&::placeholder": {
+                      color: "#c4b5fd",
                       opacity: 0.7,
                     },
+                    "&:focus": {
+                      borderColor: "#7e64af",
+                    }
                   },
                 }}
               />
@@ -182,7 +195,7 @@ export const Contact = () => {
                 root:
                   " hover:text-[#7e64af] hover:bg-black hover:border-[#7e64af] border-1 border-transparent transition-all duration-300"
               }}            >
-              Send Messagesss
+              Send Message
             </Button>
           </form>
         </div>{" "}
