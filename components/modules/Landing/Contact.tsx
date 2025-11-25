@@ -4,6 +4,8 @@ import { BrandGithub, BrandLinkedin, Mail } from "tabler-icons-react";
 
 export const Contact = () => {
 
+
+
   return (
     <section id="contact" className="mt-2xl scroll-mt-4xl" >
       <div className="lg:text-7xl text-4xl font-bold text-[#7e64af] font-Ovo">
@@ -17,15 +19,7 @@ export const Contact = () => {
                 shadow="lg"
                 radius="lg"
                 p="sm"
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-                // className="bg-[#4d415e] hover:bg-black hover:border-purpleDark hover:text-[#7e64af] border-2 border-transparent  transition-all duration-300 md:w-[300px] h-[170px]"
-                className="bg-[#4d415e] border-2 border-transparent  transition-all duration-300 md:w-[300px] h-[170px]"
-
+                className="bg-purpleDark hover:bg-black hover:border-purpleDark hover:text-[#7e64af] border-2 border-transparent flex flex-col items-center  transition-all duration-300 md:w-[300px] h-[170px]"
               >
                 <Mail size={32} className="mt-sm" />
                 <Text className="lg:text-xl sm:text-md ">Email</Text>
@@ -42,15 +36,7 @@ export const Contact = () => {
                 shadow="lg"
                 radius="lg"
                 p="sm"
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-                // className="hidden md:flex bg-[#4d415e] hover:bg-black hover:border-purpleDark hover:text-[#7e64af] border-2 border-transparent transition-all duration-300 md:w-[300px] h-[170px]"
-                className="bg-[#4d415e] border-2 border-transparent  transition-all duration-300 md:w-[300px] h-[170px]"
-
+                className="hidden md:flex bg-purpleDark hover:bg-black hover:border-purpleDark hover:text-[#7e64af] border-2 border-transparent flex flex-col items-center transition-all duration-300 md:w-[300px] h-[170px]"
               >
                 <BrandGithub size={32} className="mt-sm" />
                 <Text className="lg:text-xl sm:text-md ">GitHub</Text>
@@ -65,15 +51,7 @@ export const Contact = () => {
                 shadow="lg"
                 radius="lg"
                 p="sm"
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-                // className="hidden md:flex bg-[#4d415e] hover:bg-black hover:border-purpleDark hover:text-[#7e64af] border-2 border-transparent transition-all duration-300 md:w-[300px] h-[170px]"
-                className="bg-[#4d415e] border-2 border-transparent  transition-all duration-300 md:w-[300px] h-[170px]"
-
+                className="hidden md:flex bg-purpleDark hover:bg-black hover:border-purpleDark hover:text-[#7e64af] border-2 border-transparent flex flex-col items-center transition-all duration-300 md:w-[300px] h-[170px]"
               >
                 <BrandLinkedin size={32} className="mt-sm" />
                 <Text className="lg:text-xl sm:text-md ">LinkedIn</Text>
@@ -92,12 +70,11 @@ export const Contact = () => {
             className="lg:px-4xl "
           >
             <div>
-              {/* <TextInput
+              <TextInput
                 name="name"
                 placeholder="Your Name"
                 required
                 minLength={3}
-                bg={"black"}
                 // {...form.getInputProps("name")}
                 className="h-6xl mb-xl border-2 border-purpleDark rounded-xl"
               />
@@ -108,7 +85,6 @@ export const Contact = () => {
                 placeholder="Your Email"
                 type="email"
                 required
-
                 // {...form.getInputProps("email")}
                 className="h-6xl mb-xl border-2 border-purpleDark rounded-xl custom-placeholder"
               />
@@ -118,75 +94,10 @@ export const Contact = () => {
                 name="message"
                 placeholder="Your Message"
                 required
-                bg={"black"}
                 minLength={5}
                 // {...form.getInputProps("message")}
                 className=" h-[150px] mb-lg border-2 border-purpleDark rounded-xl"
-              /> */}
-              <TextInput
-                name="name"
-                placeholder="Your Name"
-                required
-                minLength={3}
-                className="h-6xl mb-xl rounded-xl border-2 border-purpleDark"
-                styles={{
-                  input: {
-                    backgroundColor: "transparent",
-                    color: "white",
-                    border: "transparent",
-                    "&::placeholder": {
-                      color: "#c4b5fd",
-                      opacity: 0.7,
-                    },
-                    "&:focus": {
-                      borderColor: "#7e64af",
-                    }
-                  },
-                }}
               />
-
-              <TextInput
-                name="email"
-                placeholder="Your Email"
-                type="email"
-                required
-                className="h-6xl mb-xl rounded-xl border-2 border-purpleDark"
-                styles={{
-                  input: {
-                    backgroundColor: "transparent",
-                    color: "white",
-                    "::placeholder": {
-                      color: "#c4b5fd",
-                      opacity: 0.7,
-                    },
-                    "&:focus": {
-                      borderColor: "#7e64af",
-                    }
-                  },
-                }}
-              />
-
-              <Textarea
-                name="message"
-                placeholder="Your Message"
-                required
-                minLength={5}
-                className="h-[150px] mb-lg rounded-xl border-2 border-purpleDark"
-                styles={{
-                  input: {
-                    backgroundColor: "transparent",
-                    color: "white",
-                    "::placeholder": {
-                      color: "#c4b5fd",
-                      opacity: 0.7,
-                    },
-                    "&:focus": {
-                      borderColor: "#7e64af",
-                    }
-                  },
-                }}
-              />
-
             </div>
 
             <Button
@@ -194,10 +105,8 @@ export const Contact = () => {
               variant="filled"
               color="#7e64af"
               size="lg"
-              classNames={{
-                root:
-                  " hover:text-[#7e64af] hover:bg-black hover:border-[#7e64af] border-1 border-transparent transition-all duration-300"
-              }}            >
+              className=" hover:text-[#7e64af] hover:bg-black hover:border-[#7e64af] border-1 border-transparent transition-all duration-300"
+            >
               Send Message
             </Button>
           </form>
