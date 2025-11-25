@@ -123,99 +123,111 @@ export const Projects = () => {
     ];
 
     return (
-        <section id="projects" className="mt-2xl lg:mt-4xl scroll-mt-4xl">
-            <div className="lg:text-7xl text-4xl font-bold text-[#7e64af] font-Ovo">
-                Projects
-            </div>
+        <>
+            <style dangerouslySetInnerHTML={{
+                __html: `
+                .carousel-indicator {
+                    width: 20px;
+                    height: 5px;
+                    background-color: black;
+                }
+                .carousel-indicator[data-active="true"] {
+                    background-color: #7e64af !important;
+                }
+            `}} />
+            <section id="projects" className="mt-2xl lg:mt-4xl scroll-mt-4xl">
+                <div className="lg:text-7xl text-4xl font-bold text-[#7e64af] font-Ovo">
+                    Projects
+                </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md mt-2xl">
-                {projects.map((project, index) => (
-                    <div
-                        key={index}
-                        className="bg-gradient-to-br from-[#2d1b4e] to-[#1e1538] hover:bg-black hover:from-transparent hover:to-transparent rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 px-sm py-lg hover:bg-black hover:border-purpleDark border-2 border-transparent hover:scale-105"
-                    >
-                        {project.images.length > 1 ? (
-                            <Carousel
-                                withIndicators
-                                loop
-                                styles={{
-                                    control: {
-                                        backgroundColor: 'gray', // arrow background color
-                                        color: 'white', // arrow icon color
-                                    },
-                                }}
-                                classNames={{
-                                    root: "rounded-t-2xl",
-                                    indicator: "w-2 h-2 bg-black data-[active]:bg-[#7e64af]",
-                                }}
-                            >
-                                {project.images.map((image, imgIndex) => (
-                                    <Carousel.Slide key={imgIndex}>
-                                        <div className="bg-transparent flex items-center justify-center">
-                                            <img
-                                                src={image}
-                                                alt={`${project.title} screenshot ${imgIndex + 1}`}
-                                                className="w-[350px] object-cover rounded-lg"
-                                            />
-                                        </div>
-                                    </Carousel.Slide>
-                                ))}
-                            </Carousel>
-                        ) : (
-                            <div className="bg-transparent flex items-center justify-center">
-                                <img
-                                    src={project.images[0]}
-                                    alt={`${project.title} screenshot`}
-                                    className="w-[350px] object-cover rounded-lg"
-                                />
-                            </div>
-                        )}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md mt-2xl">
+                    {projects.map((project, index) => (
+                        <div
+                            key={index}
+                            className="bg-gradient-to-br from-[#2d1b4e] to-[#1e1538] hover:bg-black hover:from-transparent hover:to-transparent rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 px-sm py-lg hover:bg-black hover:border-purpleDark border-2 border-transparent hover:scale-105"
+                        >
+                            {project.images.length > 1 ? (
+                                <Carousel
+                                    withIndicators
+                                    loop
+                                    styles={{
+                                        control: {
+                                            backgroundColor: 'gray', // arrow background color
+                                            color: 'white', // arrow icon color
+                                        },
+                                    }}
+                                    classNames={{
+                                        root: "rounded-t-2xl",
+                                        indicator: "carousel-indicator",
+                                    }}
+                                >
+                                    {project.images.map((image, imgIndex) => (
+                                        <Carousel.Slide key={imgIndex}>
+                                            <div className="bg-transparent flex items-center justify-center">
+                                                <img
+                                                    src={image}
+                                                    alt={`${project.title} screenshot ${imgIndex + 1}`}
+                                                    className="w-[350px] object-cover rounded-lg"
+                                                />
+                                            </div>
+                                        </Carousel.Slide>
+                                    ))}
+                                </Carousel>
+                            ) : (
+                                <div className="bg-transparent flex items-center justify-center">
+                                    <img
+                                        src={project.images[0]}
+                                        alt={`${project.title} screenshot`}
+                                        className="w-[350px] object-cover rounded-lg"
+                                    />
+                                </div>
+                            )}
 
-                        <div className="mt-xs">
-                            <div className="text-2xl text-[#c4b5fd] font-Ovo">
-                                {project.title}
-                            </div>
-                            <div className="text-gray-300 leading-relaxed">
-                                {project.description}
-                            </div>
-                            <div className="flex gap-xs mt-sm">
-                                {project.showGitButton && (
+                            <div className="mt-xs">
+                                <div className="text-2xl text-[#c4b5fd] font-Ovo">
+                                    {project.title}
+                                </div>
+                                <div className="text-gray-300 leading-relaxed">
+                                    {project.description}
+                                </div>
+                                <div className="flex gap-xs mt-sm">
+                                    {project.showGitButton && (
+                                        <Button
+                                            variant="outline"
+                                            color="#7e64af"
+                                            fullWidth
+                                            classNames={{
+                                                root: " hover:text-white hover:border-[#7e64af] hover:bg-[#7e64af] transition-all duration-300"
+                                            }} leftSection={project.isGitlab ? <BrandGitlab /> : <BrandGithub />}
+                                            component="a"
+                                            href={project.github}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            {project.isGitlab ? "GitLab" : "GitHub"}
+                                        </Button>
+                                    )}
+
                                     <Button
                                         variant="outline"
                                         color="#7e64af"
                                         fullWidth
                                         classNames={{
                                             root: " hover:text-white hover:border-[#7e64af] hover:bg-[#7e64af] transition-all duration-300"
-                                        }} leftSection={project.isGitlab ? <BrandGitlab /> : <BrandGithub />}
+                                        }} leftSection={<ExternalLink />}
                                         component="a"
-                                        href={project.github}
+                                        href={project.liveUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        {project.isGitlab ? "GitLab" : "GitHub"}
+                                        Visit Site
                                     </Button>
-                                )}
+                                </div>
 
-                                <Button
-                                    variant="outline"
-                                    color="#7e64af"
-                                    fullWidth
-                                    classNames={{
-                                        root: " hover:text-white hover:border-[#7e64af] hover:bg-[#7e64af] transition-all duration-300"
-                                    }} leftSection={<ExternalLink />}
-                                    component="a"
-                                    href={project.liveUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Visit Site
-                                </Button>
                             </div>
-
                         </div>
-                    </div>
-                ))}
-            </div>
-        </section >
+                    ))}
+                </div>
+            </section ></>
     );
 };

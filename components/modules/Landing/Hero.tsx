@@ -59,48 +59,70 @@ export const Hero = () => {
 
 
   return (
-    <section id="" className="flex justify-between items-center flex-row h-[70vh] scroll-mt-4xl">
-      <div className="">
-        <div className="text-4xl md:text-5xl lg:text-7xl font-bold">
-          Hi, I&apos;m {""}
-          <span className="text-[#7e64af] font-Ovo ">Dikshya K. Jha </span>
-        </div>
-        <div className="lg:text-5xl md:text-3xl text-2xl font-semibold font-Ovo">
-          <span ref={typedElement}></span>
+    <>
+      <style dangerouslySetInnerHTML={{
+        __html: `
+        .outline-button {
+          background-color: transparent !important;
+          color: #7e64af !important;
+          border: 1px solid #7e64af !important;
+          transition: all 300ms !important;
+        }
+        .outline-button:hover {
+          background-color: #7e64af !important;
+          color: white !important;
+          border-color: #7e64af !important;
+        }
+
+        .filled-button {
+          background-color: #7e64af !important;
+          color: white !important;
+          border: 1px solid transparent !important;
+          transition: all 300ms !important;
+        }
+        .filled-button:hover {
+          background-color: black !important;
+          color: #7e64af !important;
+          border-color: #7e64af !important;
+        }
+      `}} />
+      <section id="" className="flex justify-between items-center flex-row h-[70vh] scroll-mt-4xl">
+        <div className="">
+          <div className="text-4xl md:text-5xl lg:text-7xl font-bold">
+            Hi, I&apos;m {""}
+            <span className="text-[#7e64af] font-Ovo ">Dikshya K. Jha </span>
+          </div>
+          <div className="lg:text-5xl md:text-3xl text-2xl font-semibold font-Ovo">
+            <span ref={typedElement}></span>
 
 
-        </div>
-        <div className="flex flex-row gap-sm mt-md lg:mt-2xl ">
-          <Button
-            variant="outline"
-            color="#7e64af"
-            size={buttonSize}
-            classNames={{
-              root: " hover:text-white hover:border-[#7e64af] hover:bg-[#7e64af] transition-all duration-300"
-            }}
-            component="a"
-            href={"#contact"}
-          >
-            CV Available on Request
-          </Button>
-          <Button
-            variant="filled"
-            color="#7e64af"
-            size={buttonSize}
-            classNames={{
-              root:
-                " hover:text-[#7e64af] hover:bg-black hover:border-[#7e64af] border-1 border-transparent transition-all duration-300"
-            }}
-            component="a"
+          </div>
+          <div className="flex flex-row gap-sm mt-md lg:mt-2xl ">
+            <Button
+              variant="outline"
+              color="#7e64af"
+              size={buttonSize}
+              className="outline-button"
+              component="a"
+              href={"#contact"}
+            >
+              CV Available on Request
+            </Button>
+            <Button
+              variant="filled"
+              color="#7e64af"
+              size={buttonSize}
+              className="filled-button"
+              component="a"
 
-            href={"#contact"}
-          >
-            Let&apos;s Connect
-          </Button>
+              href={"#contact"}
+            >
+              Let&apos;s Connect
+            </Button>
+          </div>
         </div>
-      </div>
-      <div className="flex flex-row space-x-xl">
-        {/* <div className="relative overflow-hidden rounded-full">
+        <div className="flex flex-row space-x-xl">
+          {/* <div className="relative overflow-hidden rounded-full">
           <Image
             src={myimg}
             alt="Dikshya K. Jha"
@@ -110,20 +132,20 @@ export const Hero = () => {
           />
         </div> */}
 
-        <div className="flex flex-col justify-center items-center gap-lg">
-          <div className="cursor-pointer">
-            <BrandLinkedin size={logoSize} color="#7e64af" onClick={handleLinkedInClick} />
-          </div>
-          <div className="cursor-pointer">
-            <BrandGithub size={logoSize} color="#7e64af" onClick={handleGithubClick} />
-          </div>
-          {/* <div className="cursor-pointer">
+          <div className="flex flex-col justify-center items-center gap-lg">
+            <div className="cursor-pointer">
+              <BrandLinkedin size={logoSize} color="#7e64af" onClick={handleLinkedInClick} />
+            </div>
+            <div className="cursor-pointer">
+              <BrandGithub size={logoSize} color="#7e64af" onClick={handleGithubClick} />
+            </div>
+            {/* <div className="cursor-pointer">
             <BrandInstagram size={logoSize} color="#7e64af" />
           </div> */}
-          <div className="h-[80px] w-[2px] bg-[#7e64af]"></div>
+            <div className="h-[80px] w-[2px] bg-[#7e64af]"></div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section></>
   );
 };
 

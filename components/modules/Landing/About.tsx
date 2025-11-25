@@ -13,7 +13,7 @@ export const About = () => {
           justify-content: center;
           align-items: center;
           background-color: var(--card-bg, #4d415e);
-          border: 2px solid var(--card-border, transparent);
+          border: 1px solid var(--card-border, transparent);
           color: var(--card-color, inherit);
           transition: all 300ms;
         }
@@ -39,8 +39,8 @@ export const About = () => {
                   className="card-hover sm:w-[220px] sm:h-[200px] lg:w-[180px] lg:h-[280px]"
                 >
                   <Home size={32} />
-                  <Text className="text-xl">Home</Text>
-                  <Text className="text-xl">Nepal</Text>
+                  <Text className="text-2xl">Home</Text>
+                  <Text className="text-2xl">Nepal</Text>
                 </Paper>
               </Grid.Col>
               <Grid.Col span={4}>
@@ -51,8 +51,8 @@ export const About = () => {
                   className="card-hover sm:w-[220px] sm:h-[200px] lg:w-[180px] lg:h-[280px]"
                 >
                   <School size={32} />
-                  <Text className="text-xl">Education</Text>
-                  <Text className="text-xl">BE</Text>
+                  <Text className="text-2xl">Education</Text>
+                  <Text className="text-2xl">BE</Text>
                 </Paper>
               </Grid.Col>
               <Grid.Col span={4}>
@@ -63,8 +63,8 @@ export const About = () => {
                   className="card-hover sm:w-[220px] sm:h-[200px] lg:w-[180px] lg:h-[280px]"
                 >
                   <Briefcase size={32} />
-                  <Text className="text-xl">Work</Text>
-                  <Text className="text-xl">NXIT</Text>
+                  <Text className="text-2xl">Work</Text>
+                  <Text className="text-2xl">NXIT</Text>
                 </Paper>
               </Grid.Col>
             </Grid>
