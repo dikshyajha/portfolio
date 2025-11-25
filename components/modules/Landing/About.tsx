@@ -5,6 +5,24 @@ import { Grid, Paper, Text } from "@mantine/core";
 export const About = () => {
   return (
     <>
+      <style dangerouslySetInnerHTML={{
+        __html: `
+        .card-hover {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background-color: var(--card-bg, #4d415e);
+          border: 2px solid var(--card-border, transparent);
+          color: var(--card-color, inherit);
+          transition: all 300ms;
+        }
+        .card-hover:hover {
+          --card-bg: black;
+          --card-border: #7e64af;
+          --card-color: #7e64af;
+        }
+      `}} />
 
       <section id="about" className="mt-lg scroll-mt-4xl">
         <div className="lg:text-7xl text-5xl font-bold text-[#7e64af] font-Ovo">
@@ -13,12 +31,12 @@ export const About = () => {
         <div className="flex lg:justify-between lg:flex-row-reverse flex-col w-full lg:gap-x-xl mt-lg">
           <div className="lg:w-2/4 flex mb-xl lg:mb-0">
             <Grid gutter="10" justify="center" align="center">
-              <Grid.Col span={4} className="">
+              <Grid.Col span={4}>
                 <Paper
                   shadow="lg"
                   radius="lg"
                   p="lg"
-                  className="!bg-purpleDark !hover:bg-black hover:border-purpleDark hover:text-[#7e64af] border-2 border-transparent flex flex-col !items-center !justify-center transition-all duration-300 sm:w-[220px] sm:h-[200px] lg:w-[180px] lg:h-[280px] "
+                  className="card-hover sm:w-[220px] sm:h-[200px] lg:w-[180px] lg:h-[280px]"
                 >
                   <Home size={32} />
                   <Text className="text-xl">Home</Text>
@@ -30,7 +48,7 @@ export const About = () => {
                   shadow="lg"
                   radius="lg"
                   p="lg"
-                  className="!bg-purpleDark !hover:bg-black hover:border-purpleDark hover:text-[#7e64af] border-2 border-transparent flex flex-col !items-center !justify-center transition-all duration-300 sm:w-[220px] sm:h-[200px] lg:w-[180px] lg:h-[280px]"
+                  className="card-hover sm:w-[220px] sm:h-[200px] lg:w-[180px] lg:h-[280px]"
                 >
                   <School size={32} />
                   <Text className="text-xl">Education</Text>
@@ -42,7 +60,7 @@ export const About = () => {
                   shadow="lg"
                   radius="lg"
                   p="lg"
-                  className="!bg-purpleDark !hover:bg-black hover:border-purpleDark hover:text-[#7e64af] border-2 border-transparent flex flex-col !items-center !justify-center transition-all duration-300 sm:w-[220px] sm:h-[200px] lg:w-[180px] lg:h-[280px]"
+                  className="card-hover sm:w-[220px] sm:h-[200px] lg:w-[180px] lg:h-[280px]"
                 >
                   <Briefcase size={32} />
                   <Text className="text-xl">Work</Text>
@@ -66,8 +84,6 @@ export const About = () => {
             insatiable thirst for knowledge, all while striving for excellence
             and mastery in every facet of my life&apos;s endeavors.
           </div>
-
-
         </div>
       </section>
     </>
