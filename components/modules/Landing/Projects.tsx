@@ -140,13 +140,13 @@ export const Projects = () => {
                                 loop
                                 styles={{
                                     control: {
-                                        backgroundColor: '#7e64af', // arrow background color
+                                        backgroundColor: 'gray', // arrow background color
                                         color: 'white', // arrow icon color
                                     },
                                 }}
                                 classNames={{
                                     root: "rounded-t-2xl",
-                                    indicator: "w-2 h-2 bg-[#111827] data-[active]:bg-[#7e64af]",
+                                    indicator: "w-2 h-2 bg-black data-[active]:bg-[#7e64af]",
                                 }}
                             >
                                 {project.images.map((image, imgIndex) => (
