@@ -105,7 +105,7 @@ export const Contact = () => {
                   placeholder="Your Name"
                   required
                   minLength={3}
-                  className="custom-input h-6xl mb-xl  rounded-xl"
+                  className="custom-input h-6xl mb-xl border-2 border-purpleDark rounded-xl"
                   styles={{
                     input: {
                       backgroundColor: 'transparent',
@@ -120,7 +120,7 @@ export const Contact = () => {
                   placeholder="Your Email"
                   type="email"
                   required
-                  className="custom-input h-6xl mb-xl rounded-xl"
+                  className="custom-input h-6xl mb-xl border-2 border-purpleDark rounded-xl"
                   styles={{
                     input: {
                       backgroundColor: 'transparent',
@@ -136,7 +136,7 @@ export const Contact = () => {
                   placeholder="Your Message"
                   required
                   minLength={5}
-                  className="custom-input h-[150px] mb-lg rounded-xl"
+                  className="custom-input h-[150px] mb-lg border-2 border-purpleDark rounded-xl"
                   styles={{
                     input: {
                       backgroundColor: 'transparent',
