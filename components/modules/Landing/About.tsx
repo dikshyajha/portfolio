@@ -5,6 +5,7 @@ import { Grid, Paper, Text } from "@mantine/core";
 export const About = () => {
   return (
     <>
+
       <section id="about" className="mt-lg scroll-mt-4xl">
         <div className="lg:text-7xl text-5xl font-bold text-[#7e64af] font-Ovo">
           About Me
@@ -17,7 +18,7 @@ export const About = () => {
                   shadow="lg"
                   radius="lg"
                   p="lg"
-                  className="bg-purpleDark hover:bg-black hover:border-purpleDark hover:text-[#7e64af] border-2 border-transparent flex flex-col items-center justify-center transition-all duration-300 sm:w-[220px] sm:h-[200px] lg:w-[180px] lg:h-[280px] "
+                  className="!bg-purpleDark hover:bg-black hover:border-purpleDark hover:text-[#7e64af] border-2 border-transparent flex flex-col items-center justify-center transition-all duration-300 sm:w-[220px] sm:h-[200px] lg:w-[180px] lg:h-[280px] "
                 >
                   <Home size={32} />
                   <Text className="text-xl">Home</Text>
@@ -29,7 +30,7 @@ export const About = () => {
                   shadow="lg"
                   radius="lg"
                   p="lg"
-                  className="bg-purpleDark hover:bg-black hover:border-purpleDark hover:text-[#7e64af] border-2 border-transparent flex flex-col items-center justify-center transition-all duration-300 sm:w-[220px] sm:h-[200px] lg:w-[180px] lg:h-[280px]"
+                  className="!bg-purpleDark hover:bg-black hover:border-purpleDark hover:text-[#7e64af] border-2 border-transparent flex flex-col items-center justify-center transition-all duration-300 sm:w-[220px] sm:h-[200px] lg:w-[180px] lg:h-[280px]"
                 >
                   <School size={32} />
                   <Text className="text-xl">Education</Text>
@@ -41,7 +42,7 @@ export const About = () => {
                   shadow="lg"
                   radius="lg"
                   p="lg"
-                  className="bg-purpleDark hover:bg-black hover:border-purpleDark hover:text-[#7e64af] border-2 border-transparent flex flex-col items-center justify-center transition-all duration-300 sm:w-[220px] sm:h-[200px] lg:w-[180px] lg:h-[280px]"
+                  className="!bg-purpleDark hover:bg-black hover:border-purpleDark hover:text-[#7e64af] border-2 border-transparent flex flex-col items-center justify-center transition-all duration-300 sm:w-[220px] sm:h-[200px] lg:w-[180px] lg:h-[280px]"
                 >
                   <Briefcase size={32} />
                   <Text className="text-xl">Work</Text>
