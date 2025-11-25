@@ -21,11 +21,21 @@ export const Contact = () => {
           --card-border: #7e64af;
           --card-color: #7e64af;
         }
-          .custom-input input::placeholder,
-        .custom-input textarea::placeholder {
-          color: #9ca3af !important;
-          opacity: 1 !important;
+        .custom-input input,
+  .custom-input textarea {
+    background-color: transparent !important;
+  }
+
+   .custom-input .mantine-Input-input,
+        .custom-input .mantine-Textarea-input {
+          background-color: transparent !important;
         }
+
+  .custom-input input::placeholder,
+  .custom-input textarea::placeholder {
+    color: #9ca3af !important;
+    opacity: 1 !important;
+  }
           .submit-button {
           background-color: #7e64af !important;
           color: white !important;
@@ -54,8 +64,8 @@ export const Contact = () => {
                   className="contact-card md:w-[300px] h-[170px]"
                 >
                   <Mail size={32} className="mt-sm" />
-                  <Text className="lg:text-xl sm:text-md">Email</Text>
-                  <Text className="lg:text-xl sm:text-md">
+                  <Text className="lg:text-2xl sm:text-md">Email</Text>
+                  <Text className="lg:text-2xl sm:text-md">
                     dikshya.k.jha@gmail.com
                   </Text>
                 </Paper>
@@ -68,8 +78,8 @@ export const Contact = () => {
                   className="hidden md:flex contact-card md:w-[300px] h-[170px]"
                 >
                   <BrandGithub size={32} className="mt-sm" />
-                  <Text className="lg:text-xl sm:text-md">GitHub</Text>
-                  <Text className="lg:text-xl sm:text-md">dikshyajha</Text>
+                  <Text className="lg:text-2xl sm:text-md">GitHub</Text>
+                  <Text className="lg:text-2xl sm:text-md">dikshyajha</Text>
                 </Paper>
               </Grid.Col>
               <Grid.Col span={12}>
@@ -80,8 +90,8 @@ export const Contact = () => {
                   className="hidden md:flex contact-card md:w-[300px] h-[170px]"
                 >
                   <BrandLinkedin size={32} className="mt-sm" />
-                  <Text className="lg:text-xl sm:text-md">LinkedIn</Text>
-                  <Text className="lg:text-xl sm:text-md">Dikshya K. Jha</Text>
+                  <Text className="lg:text-2xl sm:text-md">LinkedIn</Text>
+                  <Text className="lg:text-2xl sm:text-md">Dikshya K. Jha</Text>
                 </Paper>
               </Grid.Col>
             </Grid>
@@ -99,6 +109,11 @@ export const Contact = () => {
                   required
                   minLength={3}
                   className="custom-input h-6xl mb-xl border-2 border-purpleDark rounded-xl"
+                  styles={{
+                    input: {
+                      backgroundColor: 'transparent',
+                    }
+                  }}
                 />
               </div>
               <div>
@@ -107,7 +122,12 @@ export const Contact = () => {
                   placeholder="Your Email"
                   type="email"
                   required
-                  className="custom-input h-6xl mb-xl border-2 border-purpleDark rounded-xl custom-placeholder"
+                  className="custom-input h-6xl mb-xl border-2 border-purpleDark rounded-xl"
+                  styles={{
+                    input: {
+                      backgroundColor: 'transparent',
+                    }
+                  }}
                 />
               </div>
               <div>
@@ -117,6 +137,11 @@ export const Contact = () => {
                   required
                   minLength={5}
                   className="custom-input h-[150px] mb-lg border-2 border-purpleDark rounded-xl"
+                  styles={{
+                    input: {
+                      backgroundColor: 'transparent',
+                    }
+                  }}
                 />
               </div>
 
