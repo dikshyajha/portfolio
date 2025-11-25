@@ -109,6 +109,7 @@ export const Contact = () => {
                   styles={{
                     input: {
                       backgroundColor: 'transparent',
+                      color: '#7e64af'
                     }
                   }}
                 />
@@ -123,6 +124,8 @@ export const Contact = () => {
                   styles={{
                     input: {
                       backgroundColor: 'transparent',
+                      color: '#7e64af'
+
                     }
                   }}
                 />
@@ -137,6 +140,8 @@ export const Contact = () => {
                   styles={{
                     input: {
                       backgroundColor: 'transparent',
+                      color: '#7e64af'
+
                     }
                   }}
                 />
