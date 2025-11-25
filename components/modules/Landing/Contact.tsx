@@ -109,7 +109,7 @@ export const Contact = () => {
                   styles={{
                     input: {
                       backgroundColor: 'transparent',
-                      color: '#7e64af'
+                      color: 'white'
                     }
                   }}
                 />
@@ -124,7 +124,7 @@ export const Contact = () => {
                   styles={{
                     input: {
                       backgroundColor: 'transparent',
-                      color: '#7e64af'
+                      color: 'white'
 
                     }
                   }}
@@ -140,7 +140,7 @@ export const Contact = () => {
                   styles={{
                     input: {
                       backgroundColor: 'transparent',
-                      color: '#7e64af'
+                      color: 'white'
 
                     }
                   }}
