@@ -126,6 +126,18 @@ export const Projects = () => {
         <>
             <style dangerouslySetInnerHTML={{
                 __html: `
+
+                 .outline-button {
+          background-color: transparent !important;
+          color: #7e64af !important;
+          border: 1px solid #7e64af !important;
+          transition: all 300ms !important;
+        }
+        .outline-button:hover {
+          background-color: #7e64af !important;
+          color: white !important;
+          border-color: #7e64af !important;
+        }
                 .carousel-indicator {
                     width: 20px;
                     height: 5px;
@@ -196,9 +208,9 @@ export const Projects = () => {
                                             variant="outline"
                                             color="#7e64af"
                                             fullWidth
-                                            classNames={{
-                                                root: " hover:text-white hover:border-[#7e64af] hover:bg-[#7e64af] transition-all duration-300"
-                                            }} leftSection={project.isGitlab ? <BrandGitlab /> : <BrandGithub />}
+                                            className="outline-button"
+
+                                            leftSection={project.isGitlab ? <BrandGitlab /> : <BrandGithub />}
                                             component="a"
                                             href={project.github}
                                             target="_blank"
@@ -212,9 +224,9 @@ export const Projects = () => {
                                         variant="outline"
                                         color="#7e64af"
                                         fullWidth
-                                        classNames={{
-                                            root: " hover:text-white hover:border-[#7e64af] hover:bg-[#7e64af] transition-all duration-300"
-                                        }} leftSection={<ExternalLink />}
+                                        className="outline-button"
+
+                                        leftSection={<ExternalLink />}
                                         component="a"
                                         href={project.liveUrl}
                                         target="_blank"
