@@ -10,20 +10,14 @@ export const About = () => {
           About Me
         </div>
         <div className="flex lg:justify-between lg:flex-row-reverse flex-col w-full lg:gap-x-xl mt-lg">
-          <div className="hidden lg:w-2/4 lg:flex mb-xl lg:mb-0">
+          <div className="lg:w-2/4 flex mb-xl lg:mb-0">
             <Grid gutter="10" justify="center" align="center">
               <Grid.Col span={4} className="">
                 <Paper
                   shadow="lg"
                   radius="lg"
                   p="lg"
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                  className="bg-[#4d415e] hover:bg-black hover:border-purpleDark hover:text-[#7e64af] border-2 border-transparent transition-all duration-300 sm:w-[220px] sm:h-[200px] lg:w-[180px] lg:h-[280px] "
+                  className="bg-purpleDark hover:bg-black hover:border-purpleDark hover:text-[#7e64af] border-2 border-transparent flex flex-col items-center justify-center transition-all duration-300 sm:w-[220px] sm:h-[200px] lg:w-[180px] lg:h-[280px] "
                 >
                   <Home size={32} />
                   <Text className="text-xl">Home</Text>
@@ -35,8 +29,7 @@ export const About = () => {
                   shadow="lg"
                   radius="lg"
                   p="lg"
-
-                  className="flex flex-col justify-center items-center bg-[#4d415e] hover:bg-black hover:border-purpleDark hover:text-[#7e64af] border-2 border-transparent transition-all duration-300 sm:w-[220px] sm:h-[200px] lg:w-[180px] lg:h-[280px]"
+                  className="bg-purpleDark hover:bg-black hover:border-purpleDark hover:text-[#7e64af] border-2 border-transparent flex flex-col items-center justify-center transition-all duration-300 sm:w-[220px] sm:h-[200px] lg:w-[180px] lg:h-[280px]"
                 >
                   <School size={32} />
                   <Text className="text-xl">Education</Text>
@@ -48,13 +41,7 @@ export const About = () => {
                   shadow="lg"
                   radius="lg"
                   p="lg"
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                  className="bg-[#4d415e] hover:bg-black hover:border-purpleDark hover:text-[#7e64af] border-2 border-transparent flex flex-col items-center justify-center transition-all duration-300 sm:w-[220px] sm:h-[200px] lg:w-[180px] lg:h-[280px]"
+                  className="bg-purpleDark hover:bg-black hover:border-purpleDark hover:text-[#7e64af] border-2 border-transparent flex flex-col items-center justify-center transition-all duration-300 sm:w-[220px] sm:h-[200px] lg:w-[180px] lg:h-[280px]"
                 >
                   <Briefcase size={32} />
                   <Text className="text-xl">Work</Text>
@@ -65,7 +52,7 @@ export const About = () => {
           </div>
           <div className="lg:w-2/4 text-lg">
             Greetings! I am Dikshya K. Jha, hailing from the culturally rich and
-            geographically diverse nation of Nepal. I hold a Bachelor&apos; degree
+            geographically diverse nation of Nepal. I hold a Bachelor&apos;s degree
             in Computer Engineering from Purbanchal University and am currently
             honing my expertise as a Software Developer at NXIT, where I immerse
             myself in the dynamic world of technology.
@@ -76,7 +63,7 @@ export const About = () => {
             most serene and untamed vistas. My intrinsic drive for perpetual
             growth propels me to embrace novel challenges and cultivate an
             insatiable thirst for knowledge, all while striving for excellence
-            and mastery in every facet of my life&apos; endeavors.
+            and mastery in every facet of my life&apos;s endeavors.
           </div>
 
 

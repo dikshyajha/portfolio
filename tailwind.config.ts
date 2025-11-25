@@ -7,6 +7,13 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx,html}",
     "./app/**/*.{js,ts,jsx,tsx,mdx,html}",
   ],
+  safelist: [
+    'bg-[#4d415e]',
+    'hover:bg-black',
+    'border-purpleDark',
+    'hover:border-purpleDark',
+    'hover:text-[#7e64af]',
+  ],
 
   theme: {
     fontSize: {

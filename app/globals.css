@@ -36,3 +36,19 @@ html {
   color: #ccc;
 
 }
+
+.custom-paper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #4d415e !important;
+  border: 2px solid transparent;
+  transition: all 300ms;
+}
+
+.custom-paper:hover {
+  background-color: black !important;
+  border-color: #7e64af;
+  color: #7e64af;
+}

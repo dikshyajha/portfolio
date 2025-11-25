@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 // import { Outfit, Ovo, Tenor_Sans, Assistant } from "next/font/google";
-import { MantineProvider } from "@mantine/core";
+import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
 import '@mantine/carousel/styles.css';
 import "./globals.css";
@@ -42,6 +42,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head><ColorSchemeScript /></head>
       <body className={`relative bg-black text-white`}>
         <MantineProvider>
           <div className="">
