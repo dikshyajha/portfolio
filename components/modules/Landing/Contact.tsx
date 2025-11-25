@@ -26,10 +26,7 @@ export const Contact = () => {
     background-color: transparent !important;
   }
 
-   .custom-input .mantine-Input-input,
-        .custom-input .mantine-Textarea-input {
-          background-color: transparent !important;
-        }
+
 
   .custom-input input::placeholder,
   .custom-input textarea::placeholder {
