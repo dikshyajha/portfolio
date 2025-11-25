@@ -206,7 +206,7 @@ export const Projects = () => {
                                     {project.showGitButton && (
                                         <Button
                                             variant="outline"
-                                            color="#7e64af"
+                                            // color="#7e64af"
                                             fullWidth
                                             className="outline-button"
 
@@ -222,7 +222,7 @@ export const Projects = () => {
 
                                     <Button
                                         variant="outline"
-                                        color="#7e64af"
+                                        // color="#7e64af"
                                         fullWidth
                                         className="outline-button"
 
