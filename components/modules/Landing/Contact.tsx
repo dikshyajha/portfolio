@@ -53,44 +53,28 @@ export const Contact = () => {
         <div className="flex flex-col md:flex-row items-stretch mt-2xl">
           <div className="w-full md:w-1/4">
             <Grid gutter="lg" justify="center" align="center">
-              <Grid.Col span={12}>
-                <Paper
-                  shadow="lg"
-                  radius="lg"
-                  p="sm"
-                  className="contact-card md:w-[300px] h-[170px]"
-                >
-                  <Mail size={32} className="mt-sm" />
-                  <Text className="lg:text-2xl sm:text-md">Email</Text>
-                  <Text className="lg:text-2xl sm:text-md">
-                    dikshya.k.jha@gmail.com
-                  </Text>
-                </Paper>
-              </Grid.Col>
-              <Grid.Col span={12}>
-                <Paper
-                  shadow="lg"
-                  radius="lg"
-                  p="sm"
-                  className="hidden md:flex contact-card md:w-[300px] h-[170px]"
-                >
-                  <BrandGithub size={32} className="mt-sm" />
-                  <Text className="lg:text-2xl sm:text-md">GitHub</Text>
-                  <Text className="lg:text-2xl sm:text-md">dikshyajha</Text>
-                </Paper>
-              </Grid.Col>
-              <Grid.Col span={12}>
-                <Paper
-                  shadow="lg"
-                  radius="lg"
-                  p="sm"
-                  className="hidden md:flex contact-card md:w-[300px] h-[170px]"
-                >
-                  <BrandLinkedin size={32} className="mt-sm" />
-                  <Text className="lg:text-2xl sm:text-md">LinkedIn</Text>
-                  <Text className="lg:text-2xl sm:text-md">Dikshya K. Jha</Text>
-                </Paper>
-              </Grid.Col>
+              {[
+                { icon: Mail, label: "Email", value: "dikshya.k.jha@gmail.com", href: "mailto:dikshya.k.jha@gmail.com" },
+                { icon: BrandGithub, label: "GitHub", value: "dikshyajha", href: "https://github.com/dikshyajha" },
+                { icon: BrandLinkedin, label: "LinkedIn", value: "Dikshya K. Jha", href: "https://www.linkedin.com/in/dikshya-k-jha" },
+              ].map(({ icon: Icon, label, value, href }) => (
+                <Grid.Col span={12} key={label}>
+                  <Paper
+                    component="a"
+                    href={href}
+                    target={href.startsWith("http") ? "_blank" : undefined}
+                    rel="noopener noreferrer"
+                    shadow="lg"
+                    radius="lg"
+                    p="sm"
+                    className="contact-card w-full md:w-[300px] h-[140px] justify-center"
+                  >
+                    <Icon size={32} />
+                    <Text className="text-lg lg:text-2xl">{label}</Text>
+                    <Text className="text-sm lg:text-lg break-all text-center">{value}</Text>
+                  </Paper>
+                </Grid.Col>
+              ))}
             </Grid>
           </div>
           <div className="w-full md:w-3/4 md:ml-xl mt-md md:mt-none">

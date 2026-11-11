@@ -1,6 +1,12 @@
 "use client";
-import { Home, School, Briefcase } from "tabler-icons-react";
+import { MapPin, School, Briefcase } from "tabler-icons-react";
 import { Grid, Paper, Text } from "@mantine/core";
+
+const cards = [
+  { icon: MapPin, label: "Based in", value: "Texas, USA" },
+  { icon: School, label: "Studying", value: "MS CS" },
+  { icon: Briefcase, label: "Work", value: "NXIT" },
+];
 
 export const About = () => {
   return (
@@ -12,6 +18,7 @@ export const About = () => {
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          text-align: center;
           background-color: var(--card-bg, #4d415e);
           border: 1px solid var(--card-border, transparent);
           color: var(--card-color, inherit);
@@ -30,59 +37,38 @@ export const About = () => {
         </div>
         <div className="flex lg:justify-between lg:flex-row-reverse flex-col w-full lg:gap-x-xl mt-lg">
           <div className="lg:w-2/4 flex mb-xl lg:mb-0">
-            <Grid gutter="10" justify="center" align="center">
-              <Grid.Col span={4}>
-                <Paper
-                  shadow="lg"
-                  radius="lg"
-                  p="lg"
-                  className="card-hover sm:w-[220px] sm:h-[200px] lg:w-[180px] lg:h-[280px]"
-                >
-                  <Home size={32} />
-                  <Text className="text-2xl">Home</Text>
-                  <Text className="text-2xl">Nepal</Text>
-                </Paper>
-              </Grid.Col>
-              <Grid.Col span={4}>
-                <Paper
-                  shadow="lg"
-                  radius="lg"
-                  p="lg"
-                  className="card-hover sm:w-[220px] sm:h-[200px] lg:w-[180px] lg:h-[280px]"
-                >
-                  <School size={32} />
-                  <Text className="text-2xl">Education</Text>
-                  <Text className="text-2xl">BE</Text>
-                </Paper>
-              </Grid.Col>
-              <Grid.Col span={4}>
-                <Paper
-                  shadow="lg"
-                  radius="lg"
-                  p="lg"
-                  className="card-hover sm:w-[220px] sm:h-[200px] lg:w-[180px] lg:h-[280px]"
-                >
-                  <Briefcase size={32} />
-                  <Text className="text-2xl">Work</Text>
-                  <Text className="text-2xl">NXIT</Text>
-                </Paper>
-              </Grid.Col>
+            <Grid gutter="10" justify="center" align="center" className="w-full">
+              {cards.map(({ icon: Icon, label, value }) => (
+                <Grid.Col span={4} key={label}>
+                  <Paper
+                    shadow="lg"
+                    radius="lg"
+                    p="lg"
+                    className="card-hover h-[160px] sm:h-[200px] lg:h-[280px]"
+                  >
+                    <Icon size={32} />
+                    <Text className="text-lg sm:text-2xl">{label}</Text>
+                    <Text className="text-lg sm:text-2xl">{value}</Text>
+                  </Paper>
+                </Grid.Col>
+              ))}
             </Grid>
           </div>
-          <div className="lg:w-2/4 text-lg">
-            Greetings! I am Dikshya K. Jha, hailing from the culturally rich and
-            geographically diverse nation of Nepal. I hold a Bachelor&apos;s degree
-            in Computer Engineering from Purbanchal University and am currently
-            honing my expertise as a Software Developer at NXIT, where I immerse
-            myself in the dynamic world of technology.
+          <div className="lg:w-2/4 text-lg leading-relaxed">
+            Hi! I&apos;m Dikshya, a full-stack developer from Nepal, currently
+            pursuing an MS in Computer Science at Lamar University in Texas,
+            where I also work as a Graduate Research Assistant on applied AI.
             <br />
             <br />
-            Beyond the professional realm, my intellectual curiosity extends to
-            the realms of music, reading books, and the exploration of nature&apos;s
-            most serene and untamed vistas. My intrinsic drive for perpetual
-            growth propels me to embrace novel challenges and cultivate an
-            insatiable thirst for knowledge, all while striving for excellence
-            and mastery in every facet of my life&apos;s endeavors.
+            At Next In Tech (NXIT), I grew from frontend intern to full-stack
+            developer. I build
+            production web apps with React, Next.js, NestJS, and TypeORM, from
+            e-commerce platforms to booking and management systems.
+            <br />
+            <br />
+            I hold a Bachelor&apos;s in Computer Engineering from Purbanchal
+            University. Outside of code, I enjoy music, books, and time in
+            nature.
           </div>
         </div>
       </section>
