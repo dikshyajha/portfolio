@@ -5,7 +5,7 @@ import { BrandGithub, BrandLinkedin } from "tabler-icons-react";
 
 export const Footer = () => {
   const navItems = [
-    { name: "Home", link: "#home" },
+    { name: "Home", link: "#" },
     { name: "About", link: "#about" },
     { name: "Skills", link: "#skills" },
     { name: "Projects", link: "#projects" },
@@ -25,7 +25,7 @@ export const Footer = () => {
 
   const handleLinkedInClick = () => {
     window.open(
-      "https://www.linkedin.com/in/dikshya-k-jha",
+      "https://www.linkedin.com/in/dikshya-k-jha?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B9XtBh7NKQ66PwH1DjPqt5A%3D%3D",
       "_blank",
       "noopener,noreferrer"
     );
@@ -41,10 +41,10 @@ export const Footer = () => {
   return (
     <>
       <section className="mt-wrapper bg-purpleDark hover:bg-[#7e64af] text-center text-black">
-        <div className="text-3xl md:text-5xl pt-3xl font-Ovo">
+        <div className="text-3xl md:text-5xl pt-3xl font-bol font-Ovo font font-col">
           Dikshya Kumari Jha
         </div>
-        <div className="nav flex flex-wrap justify-center gap-x-lg gap-y-xs px-sm text-sm md:text-xl mt-lg">
+        <div className="nav flex justify-center gap-x-lg text-sm md:text-xl mt-lg">
           {navItems.map((item) => (
             <div key={item.name}>
               <Link
