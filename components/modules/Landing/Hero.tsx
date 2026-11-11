@@ -11,7 +11,7 @@ export const Hero = () => {
   const typedElement = useRef<HTMLSpanElement>(null);
   const handleLinkedInClick = () => {
     window.open(
-      "https://www.linkedin.com/in/dikshya-k-jha?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B9XtBh7NKQ66PwH1DjPqt5A%3D%3D",
+      "https://www.linkedin.com/in/dikshya-k-jha",
       "_blank",
       "noopener,noreferrer"
     );
@@ -37,7 +37,7 @@ export const Hero = () => {
   useEffect(() => {
     if (typedElement.current) {
       const typed = new Typed(typedElement.current, {
-        strings: ["Computer Engineer", "FullStack Developer"],
+        strings: ["Full-Stack Developer", "MS CS Student @ Lamar", "Computer Engineer"],
         typeSpeed: 80,
         backSpeed: 50,
         backDelay: 1000,
@@ -86,18 +86,18 @@ export const Hero = () => {
           border-color: #7e64af !important;
         }
       `}} />
-      <section id="" className="flex justify-between items-center flex-row h-[70vh] scroll-mt-4xl">
+      <section id="home" className="flex justify-between items-center flex-row min-h-[70vh] gap-sm scroll-mt-4xl">
         <div className="">
-          <div className="text-4xl md:text-5xl lg:text-7xl font-bold">
+          <div className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold">
             Hi, I&apos;m {""}
-            <span className="text-[#7e64af] font-Ovo ">Dikshya K. Jha </span>
+            <span className="text-[#7e64af] font-Ovo whitespace-nowrap">Dikshya K. Jha</span>
           </div>
           <div className="lg:text-5xl md:text-3xl text-2xl font-semibold font-Ovo">
             <span ref={typedElement}></span>
 
 
           </div>
-          <div className="flex flex-row gap-sm mt-md lg:mt-2xl ">
+          <div className="flex flex-row flex-wrap gap-sm mt-md lg:mt-2xl">
             <Button
               variant="outline"
               color="#7e64af"
@@ -121,7 +121,7 @@ export const Hero = () => {
             </Button>
           </div>
         </div>
-        <div className="flex flex-row space-x-xl">
+        <div className="hidden sm:flex flex-row space-x-xl">
           {/* <div className="relative overflow-hidden rounded-full">
           <Image
             src={myimg}

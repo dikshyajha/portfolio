@@ -117,7 +117,7 @@ export const Projects = () => {
             github: "https://github.com/dikshyajha/Traditional-Event-Management-System",
             liveUrl: "http://rds-events.infinityfreeapp.com/",
             showGitButton: true,
-            isGitLab: false,
+            isGitlab: false,
 
         },
     ];

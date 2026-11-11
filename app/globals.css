@@ -3,8 +3,7 @@
 @tailwind utilities;
 
 * {
-  font-family: Tenor_Sans;
-
+  font-family: "Tenor Sans", sans-serif;
 }
 
 html {
