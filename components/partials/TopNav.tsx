@@ -1,5 +1,5 @@
 "use client"; // Ensure this is a client-side component
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Logo } from "../common/Logo";
 import { useDisclosure } from "@mantine/hooks";
 import { Burger, Drawer } from "@mantine/core";
@@ -9,6 +9,7 @@ export const TopNav = () => {
   // const [menuList, setMenuList] = useState([]);
   // const [drawerOpen, setDrawerOpen] = useState(false);
   const [opened, { open, close }] = useDisclosure(false);
+  const drawerRef = useRef<Element>(null);
 
 
   useEffect(() => {
@@ -25,6 +26,21 @@ export const TopNav = () => {
     // Cleanup event listener
     return () => {
       window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (drawerRef.current && !drawerRef.current?.contains(event.target as Node)) {
+        close()
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    // Cleanup event listener
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 

@@ -1,100 +1,111 @@
 import { Badge } from "@mantine/core";
 
-const education = [
-  {
-    degree: "MS in Computer Science",
-    school: "Lamar University, Texas",
-    date: "Aug 2026 - May 2028 (expected)",
-    details: [
-      "Graduate Research Assistant under Dr. Sujing Wang (applied AI)",
-      "Coursework: Computer Networks, Artificial Intelligence",
-      "1st among Lamar participants, Texas State University System CTF 2026 (EC-Council)",
-    ],
-  },
-  {
-    degree: "BE in Computer Engineering",
-    school: "Purbanchal University, Nepal",
-    date: "",
-    details: [],
-  },
-];
-
 export const Experience = () => {
+  // const experiences = [
+  //   {
+  //     id: 1,
+  //     role: "FullStack Developer",
+  //     date: "July 2025 - Present",
+  //     responsibilities: [
+  //       "Developed full-stack applications using MERN stack",
+  //       "Designed and implemented RESTful APIs with Node.js",
+  //       "Managed database architecture with MongoDB"
+  //     ]
+  //   },
+  //   {
+  //     id: 2,
+  //     role: "Frontend Developer",
+  //     date: "January 2025 - June 2025",
+  //     responsibilities: [
+  //       "Developed and maintained production-ready web applications",
+  //       "Implemented complex UI components and state management",
+  //       "Enhanced application architecture and code quality"
+  //     ]
+  //   },
+  //   {
+  //     id: 3,
+  //     role: "Frontend Intern",
+  //     date: "October 2024 - December 2024",
+  //     responsibilities: [
+  //       "Built responsive web applications using React and Next.js",
+  //       "Collaborated with design team for UI/UX implementation",
+  //       "Optimized application performance and loading times"
+  //     ]
+  //   }
+  // ];
+
   return (
-    <section id="experience" className="mt-2xl lg:mt-4xl scroll-mt-4xl">
+    <section id="experience" className="mt-2xl lg:mt-4xl">
       <div className="lg:text-7xl text-4xl font-bold text-[#7e64af] font-Ovo">
         Experience
       </div>
 
-      <div className="mt-2xl bg-black rounded-2xl p-lg shadow-lg border-purpleDark border-2">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-sm">
-          <div className="py-xs px-sm flex items-center">
+      <div className="mt-2xl bg-black from-transparent to-transparent rounded-2xl p-lg shadow-lg border-purpleDark border-2 ">
+        {/* Company Header */}
+        <div className="flex items-center justify-between gap-sm ">
+          <div className="py-xs px-sm flex items-center justify-center ">
             <img
               src="/images/logo-nxit.svg"
               alt="Next In Tech"
-              className="h-[48px] object-contain"
+              className="w-full h-full object-contain"
             />
           </div>
           <Badge color="#9b7fd4" variant="outline" className="mr-xs">
             October 2024 - Present
           </Badge>
+          {/* <div className="text-xl font-bold text-[#7364af] font-Ovo">
+            Next In Tech
+          </div> */}
+
         </div>
 
-        <div className="rounded-2xl p-sm mt-sm border border-[#7e64af]/10 hover:border-purpleDark transition-colors duration-300">
-          <div className="text-2xl text-[#c4b5fd] font-Ovo">
-            Full-Stack Developer
-          </div>
-          <div className="text-sm text-gray-400 mb-sm">
-            Intern (Oct 2024) → Frontend Developer (Jan 2025) → Full-Stack Developer (Jul 2025)
-          </div>
-          <ul className="space-y-xs">
-            {[
-              "Build user-facing features and server-side logic with React, Next.js, NestJS, and TypeORM",
-              "Work on a Next.js/TypeScript monorepo e-commerce platform for customizable garments",
-              "Shipped client products including ConnectTalent, CliniCross, and Biruwa Pasa",
-            ].map((item) => (
-              <li key={item} className="text-gray-300 flex items-start">
-                <span className="text-[#7e64af] mr-xs">▹</span>
-                <span className="leading-relaxed">{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
+        {/* Timeline */}
+        {/* <div className="relative">
+          {/* Vertical line */}
 
-      <div className="mt-2xl lg:text-5xl text-3xl font-bold text-[#7e64af] font-Ovo">
-        Education
-      </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-md mt-lg">
-        {education.map((ed) => (
-          <div
-            key={ed.degree}
-            className="bg-black rounded-2xl p-lg shadow-lg border-purpleDark border-2"
-          >
-            <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-xs">
-              <div>
-                <div className="text-2xl text-[#c4b5fd] font-Ovo">{ed.degree}</div>
-                <div className="text-gray-400">{ed.school}</div>
+        {/* Experience Items */}
+        {/* <div className="space-y-sm">
+            {experiences.map((exp, index) => (
+              <div key={exp.id} className="relative pl-sm">
+                {/* Dot */}
+        {/* <div className="absolute left-0 top-0 mt-2">
+                  <div className="w-10 h-10 bg-gradient-to-br from-[#7e64af] to-[#9b7fd4] rounded-full border-4 border-[#0a0118] shadow-lg flex items-center justify-center">
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                  </div>
+                </div> */}
+
+        {/* Content */}
+        {/* <div className="bg-gradient-to-br from-[#1e1538]/50 to-[#2d1b4e]/30 rounded-2xl p-sm transition-transform duration-300 shadow-lg border border-[#7e64af]/10 hover:border-purpleDark hover:bg-black hover:from-transparent hover:to-transparent">
+                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
+                    <div className="text-2xl font-bold text-[#c4b5fd] font-Ovo">
+                      {exp.role}
+                    </div>
+                    <Badge color="#9b7fd4" variant="outline" className="mr-xs">
+                      {exp.date}
+                    </Badge>
+                  </div>
+
+                  <ul className="s">
+                    {exp.responsibilities.map((item, idx) => (
+                      <li key={idx} className="text-gray-300 text-sm lg:text-base flex items-start">
+                        <span className="text-[#7e64af] mr-xs text-lg">▹</span>
+                        <span className="leading-relaxed">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-              {ed.date && (
-                <Badge color="#9b7fd4" variant="outline">
-                  {ed.date}
-                </Badge>
-              )}
-            </div>
-            {ed.details.length > 0 && (
-              <ul className="space-y-xs mt-sm">
-                {ed.details.map((d) => (
-                  <li key={d} className="text-gray-300 flex items-start">
-                    <span className="text-[#7e64af] mr-xs">▹</span>
-                    <span className="leading-relaxed">{d}</span>
-                  </li>
-                ))}
-              </ul>
-            )}
+            ))} */}
+        {/* </div> */}
+        {/* </div> */}
+
+        <div className=" rounded-2xl p-sm transition-transform duration-300 shadow-lg border border-[#7e64af]/10 hover:border-purpleDark hover:bg-black hover:from-transparent hover:to-transparent">
+          <div className="text-lg">
+            Next in Tech is an innovative software company creating solutions across various domains. I joined as an intern in October 2024 and gradually grew into a Frontend Developer in January 2025 and then into a Full-Stack Developer role after six months. I currently work with a wide range of technologies, including React.js, Next.js, Nest.js, and TypeORM, building user-facing features, developing server-side logic, and integrating databases. I am fortunate to be part of a highly supportive and skilled team that fosters curiosity, experimentation, and continuous learning. The environment exposed me to a wide range of challenges and projects, allowing me to explore new technologies, research effective approaches, and take responsibility for delivering features and solutions that add real value. This experience has strengthened my technical expertise, problem-solving skills, and collaboration, while continually inspiring me to push boundaries and grow.
+
           </div>
-        ))}
+        </div>
       </div>
-    </section>
+    </section >
   );
 };
